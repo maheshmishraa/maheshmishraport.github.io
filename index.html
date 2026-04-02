@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahesh Mishra — Data & Analytics Professional</title>
+  <meta name="description" content="Mahesh Mishra — Data Scientist, Analyst, Engineer & Power BI Developer driving business decisions across Finance, Marketing, Operations and more." />
+  <meta name="author" content="Mahesh Mishra" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Three.js background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Dot-grid overlay -->
+  <div class="dot-grid" aria-hidden="true"></div>
+
+  <!-- ═══ NAVBAR ═══════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">MM<span class="accent">.</span></a>
+
+    <ul class="nav-links">
+      <li><a href="#about"   class="nav-item">About</a></li>
+      <li><a href="#domains" class="nav-item">Domains</a></li>
+      <li><a href="#skills"  class="nav-item">Skills</a></li>
+      <li><a href="#projects"class="nav-item">Projects</a></li>
+      <li><a href="#contact" class="nav-item">Contact</a></li>
+    </ul>
+
+    <a href="assets/resume.pdf" download class="btn-outline-sm">
+      Resume <span>↓</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#about"    class="mob-link">About</a>
+    <a href="#domains"  class="mob-link">Domains</a>
+    <a href="#skills"   class="mob-link">Skills</a>
+    <a href="#projects" class="mob-link">Projects</a>
+    <a href="#contact"  class="mob-link">Contact</a>
+    <a href="assets/resume.pdf" download class="btn-gold">Download Resume ↓</a>
+  </div>
+
+  <!-- ═══ METRICS TICKER ════════════════════════════ -->
+  <div class="ticker-bar" id="ticker-bar">
+    <span class="ticker-label">LIVE&nbsp;METRICS</span>
+    <div class="ticker-mask">
+      <div class="ticker-track" id="ticker-track">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ HERO ══════════════════════════════════════ -->
+  <section id="hero" class="hero">
+    <div class="hero-left">
+
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Open to new opportunities
+      </div>
+
+      <h1 class="hero-name">
+        Mahesh<br /><span class="text-gold">Mishra</span>
+      </h1>
+
+      <div class="hero-tagline">
+        <span class="tagline-prefix">I deliver&nbsp;</span>
+        <span id="typed-roles" class="typed-accent"></span>
+      </div>
+
+      <p class="hero-desc">
+        Bridging raw data and strategic decisions across Finance, Marketing,
+        Operations and beyond. End-to-end from pipeline to dashboard to ML model.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#domains" class="btn-gold magnetic">Explore My Work</a>
+        <a href="#contact" class="btn-outline   magnetic">Get In Touch</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n" data-count="50">0</span><span class="stat-plus">+</span>
+          <span class="stat-l">Projects</span>
+        </div>
+        <span class="stat-sep"></span>
+        <div class="stat">
+          <span class="stat-n" data-count="3">0</span><span class="stat-plus">+</span>
+          <span class="stat-l">Yrs Exp.</span>
+        </div>
+        <span class="stat-sep"></span>
+        <div class="stat">
+          <span class="stat-n" data-count="5">0</span>
+          <span class="stat-l">Domains</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Domain Specialty Cards -->
+    <div class="hero-right">
+      <div class="hero-domains">
+
+        <div class="hd-card hd-finance">
+          <div class="hd-header">
+            <span class="hd-icon">📈</span>
+            <span class="hd-name">Finance</span>
+          </div>
+          <span class="hd-value">$7.6B <span class="hd-sub">Revenue</span></span>
+          <span class="hd-delta pos">▲ ROI +31.7%</span>
+          <div class="hd-bar-row">
+            <div class="hd-mini-bar" style="--p:82%;--c:var(--gold)"></div>
+          </div>
+        </div>
+
+        <div class="hd-card hd-marketing">
+          <div class="hd-header">
+            <span class="hd-icon">📣</span>
+            <span class="hd-name">Marketing</span>
+          </div>
+          <span class="hd-value">4.2× <span class="hd-sub">ROAS</span></span>
+          <span class="hd-delta pos">▼ CAC by $22</span>
+          <div class="hd-bar-row">
+            <div class="hd-mini-bar" style="--p:76%;--c:var(--blue)"></div>
+          </div>
+        </div>
+
+        <div class="hd-card hd-ops hd-wide">
+          <div class="hd-header">
+            <span class="hd-icon">⚙️</span>
+            <span class="hd-name">Operations</span>
+          </div>
+          <div class="hd-ops-row">
+            <div class="hd-ops-pill">
+              <span class="hop-val" style="color:var(--teal)">87.4%</span>
+              <span class="hop-label">OEE</span>
+            </div>
+            <div class="hd-ops-pill">
+              <span class="hop-val" style="color:var(--teal)">94.1%</span>
+              <span class="hop-label">OTIF</span>
+            </div>
+            <div class="hd-ops-pill">
+              <span class="hop-val" style="color:var(--emerald)">▼ 38%</span>
+              <span class="hop-label">Downtime</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hd-card hd-hr">
+          <div class="hd-header">
+            <span class="hd-icon">👥</span>
+            <span class="hd-name">HR Analytics</span>
+          </div>
+          <span class="hd-value">8.2% <span class="hd-sub">Attrition</span></span>
+          <span class="hd-delta pos">▼ 2.1 pts YoY</span>
+          <div class="hd-bar-row">
+            <div class="hd-mini-bar" style="--p:62%;--c:var(--violet)"></div>
+          </div>
+        </div>
+
+        <div class="hd-card hd-supply">
+          <div class="hd-header">
+            <span class="hd-icon">🚚</span>
+            <span class="hd-name">Supply Chain</span>
+          </div>
+          <span class="hd-value">96.8% <span class="hd-sub">Fill Rate</span></span>
+          <span class="hd-delta pos">▲ 4.3 pts</span>
+          <div class="hd-bar-row">
+            <div class="hd-mini-bar" style="--p:91%;--c:var(--blue)"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═════════════════════════════════════ -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// PROFILE</span>
+        <h2>About <span class="text-gold">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Bio -->
+        <div class="about-bio">
+          <p class="bio-p">
+            I'm Mahesh Mishra — a data professional with 3+ years of experience turning
+            complex datasets into clear business decisions. I work across the full data
+            lifecycle: building scalable pipelines, training predictive models, and
+            translating technical findings into executive-ready dashboards.
+          </p>
+          <p class="bio-p">
+            My background spans four closely linked disciplines — Data Science, Data
+            Analytics, Data Engineering, and Business Intelligence. This means I don't
+            just analyse data; I architect the systems that collect it, model it, and
+            present it in ways that drive action.
+          </p>
+          <p class="bio-p">
+            I've applied these skills across Finance, Marketing, Operations, HR, and
+            Supply Chain — delivering solutions that have unlocked millions in business
+            value and helped teams make faster, more confident decisions.
+          </p>
+
+          <div class="bio-facts">
+            <div class="bio-fact">
+              <span class="bf-icon">📍</span>
+              <span>Based in India — Remote &amp; Hybrid</span>
+            </div>
+            <div class="bio-fact">
+              <span class="bf-icon">🎓</span>
+              <span>3+ Years across Data &amp; Analytics</span>
+            </div>
+            <div class="bio-fact">
+              <span class="bf-icon">💼</span>
+              <span>Open to Full-time &amp; Freelance roles</span>
+            </div>
+            <div class="bio-fact">
+              <span class="bf-icon">⚡</span>
+              <span>Available to start immediately</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Links -->
+        <div class="about-info">
+          <p class="about-text">
+            Comfortable working end-to-end — from raw
+            <span class="hl gold">data engineering</span> and
+            <span class="hl blue">machine learning</span> all the way through to
+            <span class="hl teal">executive dashboards</span> and business storytelling.
+          </p>
+
+          <div class="tool-row">
+            <span class="tool-tag">🐍 Python</span>
+            <span class="tool-tag">🗃️ SQL</span>
+            <span class="tool-tag">📊 Power BI</span>
+            <span class="tool-tag">⚡ PySpark</span>
+            <span class="tool-tag">☁️ Azure</span>
+            <span class="tool-tag">🤖 ML / AI</span>
+            <span class="tool-tag">📈 Tableau</span>
+            <span class="tool-tag">🐼 Pandas</span>
+            <span class="tool-tag">🔥 Databricks</span>
+            <span class="tool-tag">📦 dbt</span>
+          </div>
+
+          <div class="about-links">
+            <a href="https://github.com"   target="_blank" rel="noopener" class="link-pill">GitHub ↗</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="link-pill">LinkedIn ↗</a>
+            <a href="https://kaggle.com"   target="_blank" rel="noopener" class="link-pill">Kaggle ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MBA DOMAIN ANALYTICS ══════════════════════ -->
+  <section id="domains" class="section domains">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// MBA DOMAINS</span>
+        <h2>Analytics Across <span class="text-gold">Business Domains</span></h2>
+        <p class="section-desc">
+          Translating complex datasets into domain-specific strategic insights.
+          Click a domain to explore real-world analytics applications.
+        </p>
+      </div>
+
+      <!-- Domain tab strip -->
+      <div class="domain-tabs" role="tablist">
+        <button class="dtab active" data-domain="finance"    role="tab" aria-selected="true">
+          <span class="dtab-icon">📈</span><span>Finance</span>
+        </button>
+        <button class="dtab" data-domain="marketing"  role="tab">
+          <span class="dtab-icon">📣</span><span>Marketing</span>
+        </button>
+        <button class="dtab" data-domain="operations" role="tab">
+          <span class="dtab-icon">⚙️</span><span>Operations</span>
+        </button>
+        <button class="dtab" data-domain="hr"         role="tab">
+          <span class="dtab-icon">👥</span><span>HR Analytics</span>
+        </button>
+        <button class="dtab" data-domain="supply"     role="tab">
+          <span class="dtab-icon">🚚</span><span>Supply Chain</span>
+        </button>
+      </div>
+
+      <!-- Domain stage -->
+      <div class="domain-stage">
+
+        <!-- ── FINANCE ── -->
+        <div class="domain-panel active" id="dp-finance">
+          <div class="kpi-strip">
+            <div class="kpi-tile">
+              <span class="kpi-l">Annual Revenue</span>
+              <span class="kpi-v">$7.6B</span>
+              <span class="kpi-d pos">▲ 18.3% YoY</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">EBITDA Margin</span>
+              <span class="kpi-v">22.4%</span>
+              <span class="kpi-d pos">▲ 340 bps</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">ROI</span>
+              <span class="kpi-v">31.7%</span>
+              <span class="kpi-d pos">▲ 4.2%</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Working Capital</span>
+              <span class="kpi-v">42 days</span>
+              <span class="kpi-d pos">▼ 12 days</span>
+            </div>
+          </div>
+          <div class="domain-body">
+            <div class="chart-panel">
+              <div class="chart-title">Revenue &amp; EBITDA Trend — FY 2024 ($M)</div>
+              <canvas id="chart-finance" width="540" height="210"></canvas>
+              <div class="chart-legend">
+                <span class="leg-item gold">── Revenue</span>
+                <span class="leg-item teal">╌╌ EBITDA</span>
+              </div>
+            </div>
+            <div class="insight-panel">
+              <h4 class="ins-title">Key Insights</h4>
+              <ul class="ins-list">
+                <li>Revenue grew 18.3% YoY, led by Q4 performance exceeding forecast by 12%</li>
+                <li>EBITDA margin expanded 340 bps to 22.4% through cost optimization</li>
+                <li>Working capital improved by 12 days via receivables automation</li>
+                <li>ML-powered cash flow forecasting improved accuracy to ±3.2%</li>
+              </ul>
+              <div class="ins-tools">
+                <span>Python</span><span>Power BI</span><span>SQL Server</span><span>DAX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── MARKETING ── -->
+        <div class="domain-panel" id="dp-marketing">
+          <div class="kpi-strip">
+            <div class="kpi-tile">
+              <span class="kpi-l">ROAS</span>
+              <span class="kpi-v">4.2×</span>
+              <span class="kpi-d pos">▲ 0.8×</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">CAC</span>
+              <span class="kpi-v">$148</span>
+              <span class="kpi-d pos">▼ $22</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Customer LTV</span>
+              <span class="kpi-v">$2,847</span>
+              <span class="kpi-d pos">▲ $340</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Conversion Rate</span>
+              <span class="kpi-v">3.8%</span>
+              <span class="kpi-d pos">▲ 0.6%</span>
+            </div>
+          </div>
+          <div class="domain-body">
+            <div class="chart-panel">
+              <div class="chart-title">Customer Acquisition Funnel</div>
+              <canvas id="chart-marketing" width="540" height="210"></canvas>
+            </div>
+            <div class="insight-panel">
+              <h4 class="ins-title">Key Insights</h4>
+              <ul class="ins-list">
+                <li>Funnel analysis revealed 42% drop-off at Engagement → Lead stage</li>
+                <li>A/B test framework identified 3 winning campaign variants (ROAS +0.8×)</li>
+                <li>Customer segmentation model increased LTV prediction accuracy to 89%</li>
+                <li>Attribution modelling shifted budget allocation, reducing CAC by $22</li>
+              </ul>
+              <div class="ins-tools">
+                <span>Python</span><span>GA4</span><span>Tableau</span><span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── OPERATIONS ── -->
+        <div class="domain-panel" id="dp-operations">
+          <div class="kpi-strip">
+            <div class="kpi-tile">
+              <span class="kpi-l">OEE</span>
+              <span class="kpi-v">87.4%</span>
+              <span class="kpi-d neg">▼ 2.1%</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Cycle Time</span>
+              <span class="kpi-v">4.2 min</span>
+              <span class="kpi-d pos">▼ 0.8 min</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">OTIF Rate</span>
+              <span class="kpi-v">94.1%</span>
+              <span class="kpi-d pos">▲ 3.2%</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Downtime</span>
+              <span class="kpi-v">2.8%</span>
+              <span class="kpi-d pos">▼ 1.4%</span>
+            </div>
+          </div>
+          <div class="domain-body">
+            <div class="chart-panel">
+              <div class="chart-title">Operational Efficiency Gauges</div>
+              <canvas id="chart-operations" width="540" height="210"></canvas>
+            </div>
+            <div class="insight-panel">
+              <h4 class="ins-title">Key Insights</h4>
+              <ul class="ins-list">
+                <li>Predictive maintenance model reduced unplanned downtime by 38%</li>
+                <li>Process mining revealed 3 bottlenecks reducing cycle time by 0.8 min</li>
+                <li>Real-time IoT sensor dashboard enables shift-level decision making</li>
+                <li>Anomaly detection alerts cut quality defect rate from 4.8% to 1.2%</li>
+              </ul>
+              <div class="ins-tools">
+                <span>Python</span><span>Power BI</span><span>Spark</span><span>IoT/Azure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── HR ANALYTICS ── -->
+        <div class="domain-panel" id="dp-hr">
+          <div class="kpi-strip">
+            <div class="kpi-tile">
+              <span class="kpi-l">Attrition Rate</span>
+              <span class="kpi-v">8.2%</span>
+              <span class="kpi-d pos">▼ 2.1%</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Engagement Score</span>
+              <span class="kpi-v">78/100</span>
+              <span class="kpi-d pos">▲ 6 pts</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Time-to-Hire</span>
+              <span class="kpi-v">28 days</span>
+              <span class="kpi-d pos">▼ 8 days</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Training ROI</span>
+              <span class="kpi-v">2.4×</span>
+              <span class="kpi-d pos">▲ 0.4×</span>
+            </div>
+          </div>
+          <div class="domain-body">
+            <div class="chart-panel">
+              <div class="chart-title">Attrition Rate by Department (%)</div>
+              <canvas id="chart-hr" width="540" height="210"></canvas>
+            </div>
+            <div class="insight-panel">
+              <h4 class="ins-title">Key Insights</h4>
+              <ul class="ins-list">
+                <li>Attrition ML model predicts at-risk employees 90 days early (84% recall)</li>
+                <li>Sales dept attrition 14.6% — driven by compensation gap analysis</li>
+                <li>Engagement survey NLP flagged 3 key themes driving dissatisfaction</li>
+                <li>Workforce planning model reduced overstaffing cost by $1.2M annually</li>
+              </ul>
+              <div class="ins-tools">
+                <span>Python</span><span>NLP</span><span>Power BI</span><span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── SUPPLY CHAIN ── -->
+        <div class="domain-panel" id="dp-supply">
+          <div class="kpi-strip">
+            <div class="kpi-tile">
+              <span class="kpi-l">Inventory Turns</span>
+              <span class="kpi-v">8.3×</span>
+              <span class="kpi-d pos">▲ 1.2×</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Lead Time</span>
+              <span class="kpi-v">14 days</span>
+              <span class="kpi-d pos">▼ 6 days</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Fill Rate</span>
+              <span class="kpi-v">96.8%</span>
+              <span class="kpi-d pos">▲ 4.3%</span>
+            </div>
+            <div class="kpi-tile">
+              <span class="kpi-l">Forecast Accuracy</span>
+              <span class="kpi-v">91.2%</span>
+              <span class="kpi-d pos">▲ 8.4%</span>
+            </div>
+          </div>
+          <div class="domain-body">
+            <div class="chart-panel">
+              <div class="chart-title">Demand vs Inventory Levels — FY 2024</div>
+              <canvas id="chart-supply" width="540" height="210"></canvas>
+              <div class="chart-legend">
+                <span class="leg-item gold">── Demand</span>
+                <span class="leg-item blue">── Inventory</span>
+              </div>
+            </div>
+            <div class="insight-panel">
+              <h4 class="ins-title">Key Insights</h4>
+              <ul class="ins-list">
+                <li>ARIMA + ML ensemble model improved demand forecast accuracy by 8.4%</li>
+                <li>Safety stock optimization freed $4.2M in working capital</li>
+                <li>Supplier risk scoring model flagged 3 single-source vulnerabilities</li>
+                <li>Real-time inventory dashboard reduced stockout incidents by 61%</li>
+              </ul>
+              <div class="ins-tools">
+                <span>Python</span><span>ARIMA</span><span>Power BI</span><span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /domain-stage -->
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ════════════════════════════════════ -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// EXPERTISE</span>
+        <h2>Skills &amp; <span class="text-gold">Tech Stack</span></h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+          <div class="skill-card-hd">
+            <span class="sk-icon">🔬</span>
+            <h3>Data Science &amp; ML</h3>
+          </div>
+          <div class="skill-list">
+            <div class="sk-row"><div class="sk-labels"><span>Python</span><span>90%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="90" style="--c:#d4940a"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Machine Learning</span><span>85%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="85" style="--c:#3574e0"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Statistics</span><span>80%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="80" style="--c:#0d9488"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Deep Learning</span><span>70%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="70" style="--c:#7c3aed"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-hd">
+            <span class="sk-icon">🗄️</span>
+            <h3>Data Engineering</h3>
+          </div>
+          <div class="skill-list">
+            <div class="sk-row"><div class="sk-labels"><span>SQL</span><span>95%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="95" style="--c:#d4940a"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Apache Spark</span><span>78%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="78" style="--c:#3574e0"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Azure / Databricks</span><span>72%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="72" style="--c:#0d9488"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>ETL / ELT</span><span>88%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="88" style="--c:#7c3aed"></div></div></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-hd">
+            <span class="sk-icon">📊</span>
+            <h3>Analytics &amp; BI</h3>
+          </div>
+          <div class="skill-list">
+            <div class="sk-row"><div class="sk-labels"><span>Power BI</span><span>95%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="95" style="--c:#d4940a"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>DAX / M Query</span><span>90%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="90" style="--c:#3574e0"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Tableau</span><span>80%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="80" style="--c:#0d9488"></div></div></div>
+            <div class="sk-row"><div class="sk-labels"><span>Data Storytelling</span><span>88%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-w="88" style="--c:#7c3aed"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════ -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// PROJECT PORTFOLIO</span>
+        <h2>Featured <span class="text-gold">Projects</span></h2>
+        <p class="section-desc">65 projects across 7 tool categories. Select a tab to explore.</p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="proj-tabs">
+        <button class="ptab active" data-panel="pp-ml">
+          <span>🤖</span><span>ML / AI</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-bi">
+          <span>📊</span><span>Power BI</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-tableau">
+          <span>📈</span><span>Tableau</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-sql">
+          <span>🗃️</span><span>SQL</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-excel">
+          <span>📗</span><span>Excel</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-ppt">
+          <span>📑</span><span>PowerPoint</span><span class="ptab-n">10</span>
+        </button>
+        <button class="ptab" data-panel="pp-word">
+          <span>📄</span><span>Word</span><span class="ptab-n">5</span>
+        </button>
+      </div>
+
+      <!-- Panels -->
+      <div class="proj-stage">
+
+        <!-- ── ML / AI ── -->
+        <div class="proj-panel active" id="pp-ml" style="--cat:#3574e0">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Customer Churn Prediction</h3><a href="#" class="pj-link">↗</a></div><p>End-to-end ML pipeline with XGBoost &amp; SHAP explainability achieving 94% accuracy.</p><div class="pj-tags"><span>Python</span><span>XGBoost</span><span>SHAP</span><span>FastAPI</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Sales Revenue Forecasting</h3><a href="#" class="pj-link">↗</a></div><p>LSTM-based time-series model forecasting monthly revenue with ±3.2% MAPE.</p><div class="pj-tags"><span>Python</span><span>LSTM</span><span>Scikit-learn</span><span>Azure ML</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>NLP Sentiment Analysis Engine</h3><a href="#" class="pj-link">↗</a></div><p>Fine-tuned BERT for multi-class sentiment classification on social media data.</p><div class="pj-tags"><span>Python</span><span>BERT</span><span>HuggingFace</span><span>Transformers</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Fraud Detection System</h3><a href="#" class="pj-link">↗</a></div><p>Real-time fraud scoring using Isolation Forest and anomaly detection on transaction data.</p><div class="pj-tags"><span>Python</span><span>Isolation Forest</span><span>SQL</span><span>Azure</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Demand Forecasting Pipeline</h3><a href="#" class="pj-link">↗</a></div><p>Ensemble demand forecasting combining Prophet and ARIMA for supply chain planning.</p><div class="pj-tags"><span>Python</span><span>Prophet</span><span>ARIMA</span><span>Azure ML</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Employee Attrition Predictor</h3><a href="#" class="pj-link">↗</a></div><p>Flags at-risk employees 90 days early with 84% recall using Random Forest &amp; SHAP.</p><div class="pj-tags"><span>Python</span><span>Random Forest</span><span>SHAP</span><span>HR Data</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Price Optimisation Engine</h3><a href="#" class="pj-link">↗</a></div><p>Dynamic pricing model with Gradient Boosting validated through A/B testing framework.</p><div class="pj-tags"><span>Python</span><span>Gradient Boosting</span><span>A/B Testing</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Product Defect Classifier</h3><a href="#" class="pj-link">↗</a></div><p>CNN-based image classifier for quality control in manufacturing, deployed on Azure Vision.</p><div class="pj-tags"><span>Python</span><span>CNN</span><span>TensorFlow</span><span>Azure Vision</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Customer Recommendation Engine</h3><a href="#" class="pj-link">↗</a></div><p>Scalable collaborative filtering recommender system running on distributed PySpark compute.</p><div class="pj-tags"><span>Python</span><span>Collaborative Filtering</span><span>PySpark</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Credit Risk Scoring Model</h3><a href="#" class="pj-link">↗</a></div><p>Basel-compliant credit scorecard built with WoE binning, logistic regression &amp; Gini validation.</p><div class="pj-tags"><span>Python</span><span>Logistic Regression</span><span>WoE</span><span>Scorecard</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── POWER BI ── -->
+        <div class="proj-panel" id="pp-bi" style="--cat:#d4940a">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Sales Intelligence Dashboard</h3><a href="#" class="pj-link">↗</a></div><p>Real-time sales KPIs with drill-through pages, dynamic tooltips, and advanced DAX measures.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Financial Performance KPIs</h3><a href="#" class="pj-link">↗</a></div><p>CFO-level P&amp;L, EBITDA, and margin analysis dashboard connected to Azure Synapse.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure Synapse</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>HR Workforce Analytics Report</h3><a href="#" class="pj-link">↗</a></div><p>Headcount, attrition, engagement, and time-to-hire metrics across all departments.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Supply Chain Performance Monitor</h3><a href="#" class="pj-link">↗</a></div><p>End-to-end supply chain visibility covering OTIF, lead time, inventory, and fill rate.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Marketing Campaign ROI Tracker</h3><a href="#" class="pj-link">↗</a></div><p>Multi-channel campaign attribution and ROAS tracking with GA4 and CRM integration.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>GA4</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Executive Scorecard &amp; KPI Hub</h3><a href="#" class="pj-link">↗</a></div><p>C-suite scorecard with automated threshold alerts and month-on-month variance commentary.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Inventory &amp; Stock Level Monitor</h3><a href="#" class="pj-link">↗</a></div><p>Real-time inventory dashboard with reorder point alerts and dead-stock identification.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Customer Segmentation Report</h3><a href="#" class="pj-link">↗</a></div><p>RFM-based customer segmentation with Python-powered clustering visualised in Power BI.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Python</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Operations Efficiency Dashboard</h3><a href="#" class="pj-link">↗</a></div><p>OEE, downtime, cycle time, and quality defect tracking connected to live IoT sensor data.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>IoT / Azure</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Budget vs Actuals Tracker</h3><a href="#" class="pj-link">↗</a></div><p>Budget variance analysis across all cost centres with automated commentary and drill-down.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── TABLEAU ── -->
+        <div class="proj-panel" id="pp-tableau" style="--cat:#0d9488">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Revenue Growth Story</h3><a href="#" class="pj-link">↗</a></div><p>Animated revenue trend analysis across regions with story-point narrative structure.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Customer Journey Funnel</h3><a href="#" class="pj-link">↗</a></div><p>Multi-channel attribution funnel from awareness to conversion with GA4 integration.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>GA4</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Regional Sales Performance</h3><a href="#" class="pj-link">↗</a></div><p>Geo-spatial sales heatmap with territory drill-down and Mapbox integration.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Mapbox</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Product Category Breakdown</h3><a href="#" class="pj-link">↗</a></div><p>Category-level profitability, sales mix, and margin analysis with parameter-driven views.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Cohort Retention Analysis</h3><a href="#" class="pj-link">↗</a></div><p>Monthly cohort retention heatmap and churn curve analysis using Python-prep data.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Market Basket Analysis Viz</h3><a href="#" class="pj-link">↗</a></div><p>Visual dashboard of association rules from Apriori algorithm — lift, confidence, support.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Employee Performance Dashboard</h3><a href="#" class="pj-link">↗</a></div><p>KPI scoring, performance distribution, and ranking with privacy-safe aggregation.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>HR Data</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Website Traffic Analytics</h3><a href="#" class="pj-link">↗</a></div><p>Session, bounce rate, and conversion analytics blending GA4 data with CRM pipeline.</p><div class="pj-tags"><span>Tableau</span><span>GA4</span><span>Python</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Profit Margin &amp; Cost Analysis</h3><a href="#" class="pj-link">↗</a></div><p>Waterfall and bridge charts for margin decomposition across products and channels.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Competitive Benchmarking</h3><a href="#" class="pj-link">↗</a></div><p>Market positioning vs competitor benchmarks using web-scraped and third-party data.</p><div class="pj-tags"><span>Tableau</span><span>Python</span><span>Web Data</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── SQL ── -->
+        <div class="proj-panel" id="pp-sql" style="--cat:#7c3aed">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>E-commerce Data Warehouse</h3><a href="#" class="pj-link">↗</a></div><p>Kimball star-schema data warehouse design for a multi-channel retail analytics platform.</p><div class="pj-tags"><span>SQL</span><span>SSMS</span><span>Star Schema</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Customer 360 Data Model</h3><a href="#" class="pj-link">↗</a></div><p>Unified customer view integrating 8 source systems via Azure and dbt transformations.</p><div class="pj-tags"><span>SQL</span><span>Azure</span><span>dbt</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Financial Reporting Schema</h3><a href="#" class="pj-link">↗</a></div><p>IFRS-compliant financial data model with SSRS reports and parameterised stored procedures.</p><div class="pj-tags"><span>SQL Server</span><span>SSRS</span><span>Stored Procs</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>ETL Pipeline Optimisation</h3><a href="#" class="pj-link">↗</a></div><p>Achieved 70% query performance improvement via execution plan analysis and index strategy.</p><div class="pj-tags"><span>SQL</span><span>SSIS</span><span>Azure Data Factory</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Stored Procedure Library</h3><a href="#" class="pj-link">↗</a></div><p>Reusable T-SQL stored procedure library covering 50+ business operations with error handling.</p><div class="pj-tags"><span>T-SQL</span><span>SQL Server</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Query Performance Tuning</h3><a href="#" class="pj-link">↗</a></div><p>Index strategy redesign reducing average query execution time by 85% across production tables.</p><div class="pj-tags"><span>SQL</span><span>Execution Plans</span><span>Indexing</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Data Quality Framework</h3><a href="#" class="pj-link">↗</a></div><p>Automated DQ checks using SQL and dbt tests with alerting pipeline for critical failures.</p><div class="pj-tags"><span>SQL</span><span>Python</span><span>dbt</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Cross-database Migration</h3><a href="#" class="pj-link">↗</a></div><p>Zero-downtime migration of 2TB SQL Server database to Azure SQL with validation scripts.</p><div class="pj-tags"><span>SQL</span><span>Azure</span><span>Migration Scripts</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Real-time Inventory Engine</h3><a href="#" class="pj-link">↗</a></div><p>Sub-second inventory query system for 500K SKUs using triggers and optimised stored procs.</p><div class="pj-tags"><span>SQL</span><span>Triggers</span><span>Stored Procs</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Sales Attribution Model</h3><a href="#" class="pj-link">↗</a></div><p>Multi-touch attribution model built entirely in SQL using window functions and recursive CTEs.</p><div class="pj-tags"><span>SQL</span><span>Window Functions</span><span>CTEs</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── EXCEL ── -->
+        <div class="proj-panel" id="pp-excel" style="--cat:#10b981">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Financial Modelling &amp; DCF Valuation</h3><a href="#" class="pj-link">↗</a></div><p>Three-statement financial model with DCF, sensitivity tables, and scenario analysis.</p><div class="pj-tags"><span>Excel</span><span>VBA</span><span>Named Ranges</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Annual Budget Planning Template</h3><a href="#" class="pj-link">↗</a></div><p>Automated budget consolidation template for 15 departments with Power Query refresh.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Pivot Tables</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Interactive KPI Tracker Dashboard</h3><a href="#" class="pj-link">↗</a></div><p>Dynamic KPI dashboard with 30+ metrics, slicers, and conditional formatting.</p><div class="pj-tags"><span>Excel</span><span>Charts</span><span>Slicers</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Project Portfolio Tracker</h3><a href="#" class="pj-link">↗</a></div><p>PMO-level portfolio tracker with automated Gantt chart, RAG status, and milestone alerts.</p><div class="pj-tags"><span>Excel</span><span>Gantt Chart</span><span>VBA</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Sales Commission Calculator</h3><a href="#" class="pj-link">↗</a></div><p>Multi-tier commission model with real-time calculation using Dynamic Arrays and XLOOKUP.</p><div class="pj-tags"><span>Excel</span><span>Dynamic Arrays</span><span>XLOOKUP</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Scenario &amp; Sensitivity Analysis</h3><a href="#" class="pj-link">↗</a></div><p>Integrated sensitivity model for investment decisions using Data Tables and Goal Seek.</p><div class="pj-tags"><span>Excel</span><span>Data Tables</span><span>Goal Seek</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Monthly Sales Pivot Report</h3><a href="#" class="pj-link">↗</a></div><p>Automated monthly reporting from raw ERP exports via Power Query transformation.</p><div class="pj-tags"><span>Excel</span><span>Pivot Tables</span><span>Power Query</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>HR Headcount &amp; Capacity Planner</h3><a href="#" class="pj-link">↗</a></div><p>Workforce planning model across 12 departments with scenario-based headcount forecasting.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Charts</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Break-even &amp; Profitability Model</h3><a href="#" class="pj-link">↗</a></div><p>Product-level break-even analysis and contribution margin model with visual output.</p><div class="pj-tags"><span>Excel</span><span>Charts</span><span>Formulae</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Dynamic Revenue Forecast</h3><a href="#" class="pj-link">↗</a></div><p>Rolling 12-month revenue forecast synced to actuals via Power Query with variance flags.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Forecast Functions</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── POWERPOINT ── -->
+        <div class="proj-panel" id="pp-ppt" style="--cat:#f43f5e">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Board-Level Strategy Deck</h3><a href="#" class="pj-link">↗</a></div><p>Annual strategy presentation for the C-suite and board with data-driven visual narrative.</p><div class="pj-tags"><span>PowerPoint</span><span>Data Visualisation</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Quarterly Business Review</h3><a href="#" class="pj-link">↗</a></div><p>QBR deck with automated metric exports from Power BI and structured insight commentary.</p><div class="pj-tags"><span>PowerPoint</span><span>Power BI Export</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Customer Insights Data Story</h3><a href="#" class="pj-link">↗</a></div><p>Storytelling-led deck presenting customer behaviour analysis for the marketing team.</p><div class="pj-tags"><span>PowerPoint</span><span>Charts</span><span>Narrative</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Investor Pitch Deck</h3><a href="#" class="pj-link">↗</a></div><p>Series A pitch presentation with integrated financial projections and market sizing.</p><div class="pj-tags"><span>PowerPoint</span><span>Financial Models</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Product Launch Go-to-Market</h3><a href="#" class="pj-link">↗</a></div><p>GTM strategy deck for new product line launch covering market research and positioning.</p><div class="pj-tags"><span>PowerPoint</span><span>Market Research</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Annual Report Executive Summary</h3><a href="#" class="pj-link">↗</a></div><p>Visual annual report with custom infographic design and key financial highlights.</p><div class="pj-tags"><span>PowerPoint</span><span>Infographics</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Marketing Campaign Proposal</h3><a href="#" class="pj-link">↗</a></div><p>Data-backed campaign proposal with ROI projections, channel mix, and budget breakdown.</p><div class="pj-tags"><span>PowerPoint</span><span>Analytics</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Operations Process Review</h3><a href="#" class="pj-link">↗</a></div><p>As-is / to-be process analysis with swimlane diagrams and prioritised improvement plan.</p><div class="pj-tags"><span>PowerPoint</span><span>Process Diagrams</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Data Science Project Showcase</h3><a href="#" class="pj-link">↗</a></div><p>Model results, business impact, and methodology presented to non-technical leadership.</p><div class="pj-tags"><span>PowerPoint</span><span>ML Results</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Stakeholder Analytics Summary</h3><a href="#" class="pj-link">↗</a></div><p>Monthly analytics summary with KPI snapshots and insight highlights for business stakeholders.</p><div class="pj-tags"><span>PowerPoint</span><span>Power BI Exports</span></div></div></div>
+          </div>
+        </div>
+
+        <!-- ── WORD ── -->
+        <div class="proj-panel" id="pp-word" style="--cat:#3574e0">
+          <div class="proj-grid">
+            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Data Science Project Documentation</h3><a href="#" class="pj-link">↗</a></div><p>End-to-end ML project documentation covering methodology, model cards, and deployment notes.</p><div class="pj-tags"><span>Word</span><span>Technical Writing</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Business Requirements Document</h3><a href="#" class="pj-link">↗</a></div><p>BRD template for data and analytics initiatives with stakeholder sign-off structure.</p><div class="pj-tags"><span>Word</span><span>Process Mapping</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Analytics Report Template Suite</h3><a href="#" class="pj-link">↗</a></div><p>Branded report templates for 6 business functions with automated styles and formatting.</p><div class="pj-tags"><span>Word</span><span>Styles</span><span>Formatting</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Data Governance Policy</h3><a href="#" class="pj-link">↗</a></div><p>Enterprise data governance framework covering ownership, lineage, quality, and compliance.</p><div class="pj-tags"><span>Word</span><span>Compliance</span></div></div></div>
+            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Technical Specification Document</h3><a href="#" class="pj-link">↗</a></div><p>Data architecture and pipeline specification with system diagrams and integration details.</p><div class="pj-tags"><span>Word</span><span>Architecture Diagrams</span></div></div></div>
+          </div>
+        </div>
+
+      </div><!-- /proj-stage -->
+    </div>
+  </section>
+
+  <!-- ═══ BLOG ══════════════════════════════════════ -->
+  <section id="blog" class="section blog">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// PERSPECTIVES</span>
+        <h2>Latest <span class="text-gold">Articles</span></h2>
+      </div>
+
+      <div class="blog-carousel">
+        <button class="blog-arrow blog-prev" aria-label="Previous articles">&#8592;</button>
+
+        <div class="blog-track-wrap">
+          <div class="blog-track">
+            <article class="blog-card">
+              <div class="blog-meta"><span>Mar 2026</span><span>5 min read</span></div>
+              <h3>Why Every Data Scientist Should Master Power BI</h3>
+              <p>Bridging the gap between model outputs and business understanding.</p>
+              <a href="#" class="blog-cta">Read Article →</a>
+            </article>
+
+            <article class="blog-card blog-featured">
+              <div class="blog-meta">
+                <span>Feb 2026</span><span>8 min read</span>
+                <span class="blog-feat-tag">Featured</span>
+              </div>
+              <h3>Building Production ML Pipelines: Lessons Learned</h3>
+              <p>From Jupyter notebooks to scalable, monitored, production-grade systems.</p>
+              <a href="#" class="blog-cta">Read Article →</a>
+            </article>
+
+            <article class="blog-card">
+              <div class="blog-meta"><span>Jan 2026</span><span>6 min read</span></div>
+              <h3>DAX vs Python: When to Use What for Analytics</h3>
+              <p>A practical guide to choosing the right analytical tool.</p>
+              <a href="#" class="blog-cta">Read Article →</a>
+            </article>
+          </div>
+        </div>
+
+        <button class="blog-arrow blog-next" aria-label="Next articles">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══════════════════════════════════ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// COLLABORATE</span>
+        <h2>Let's <span class="text-gold">Connect</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p class="contact-desc">
+            Open to full-time roles, consulting engagements, and data collaborations.
+            Let's turn your data challenges into strategic advantages.
+          </p>
+          <div class="contact-details">
+            <div class="cd-row"><span class="cd-icon">📧</span><span>mahesh@example.com</span></div>
+            <div class="cd-row"><span class="cd-icon">📍</span><span>India — Remote &amp; Hybrid</span></div>
+            <div class="cd-row"><span class="cd-icon">⚡</span><span>Responds within 24 hours</span></div>
+          </div>
+          <div class="social-row">
+            <a href="#" class="soc-btn magnetic" title="LinkedIn">in</a>
+            <a href="#" class="soc-btn magnetic" title="GitHub">gh</a>
+            <a href="#" class="soc-btn magnetic" title="Kaggle">kg</a>
+            <a href="#" class="soc-btn magnetic" title="X">𝕏</a>
+          </div>
+          <a href="assets/resume.pdf" download class="btn-gold resume-btn">
+            Download Resume ↓
+          </a>
+        </div>
+
+        <form class="contact-form" id="contact-form"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST" novalidate>
+          <div class="form-row">
+            <div class="fg">
+              <input type="text"  name="name"    id="fn" class="fi" placeholder=" " required />
+              <label for="fn">Full Name</label>
+            </div>
+            <div class="fg">
+              <input type="email" name="email"   id="fe" class="fi" placeholder=" " required />
+              <label for="fe">Email Address</label>
+            </div>
+          </div>
+          <div class="fg">
+            <input type="text" name="subject" id="fs" class="fi" placeholder=" " />
+            <label for="fs">Subject</label>
+          </div>
+          <div class="fg">
+            <textarea name="message" id="fm" class="fi fi-ta" placeholder=" " rows="5" required></textarea>
+            <label for="fm">Message</label>
+          </div>
+          <button type="submit" class="btn-gold form-btn magnetic" id="form-submit">
+            <span class="fbtn-label">Send Message</span>
+            <span class="fbtn-arr">→</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">MM<span class="accent">.</span></span>
+      <p class="footer-line">Data · Insight · Impact</p>
+      <p class="footer-copy">© 2026 Mahesh Mishra — Designed &amp; Built from scratch</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/domains.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
