@@ -31,37 +31,27 @@
       requestAnimationFrame(lerp);
     })();
 
-    document.querySelectorAll('a, button, .pj-card, .blog-card, .blog-arrow, .tool-tag, .dtab, .ptab, .skill-card, .kpi-tile').forEach(el => {
+    document.querySelectorAll('a, button, .pj-card, .blog-card, .blog-arrow, .tool-tag, .dtab, .ptab, .ltab, .skill-card, .kpi-tile').forEach(el => {
       el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
       el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
     });
   }
 
   /* ══════════════════════════════════════════════
-     2. METRICS TICKER
+     2. SKILLS TICKER
   ══════════════════════════════════════════════ */
-  const tickerItems = [
-    { label: 'Revenue Growth',    value: '+18.3%',  cls: 'pos' },
-    { label: 'EBITDA Margin',     value: '22.4%',   cls: 'pos' },
-    { label: 'Customer LTV',      value: '$2,847',  cls: 'pos' },
-    { label: 'CAC',               value: '$148',    cls: 'pos' },
-    { label: 'ROAS',              value: '4.2×',    cls: 'pos' },
-    { label: 'OEE',               value: '87.4%',   cls: '' },
-    { label: 'OTIF Rate',         value: '94.1%',   cls: 'pos' },
-    { label: 'Attrition Rate',    value: '8.2%',    cls: 'neg' },
-    { label: 'Inventory Turns',   value: '8.3×',    cls: 'pos' },
-    { label: 'Forecast Accuracy', value: '91.2%',   cls: 'pos' },
-    { label: 'Fill Rate',         value: '96.8%',   cls: 'pos' },
-    { label: 'Downtime',          value: '2.8%',    cls: 'neg' },
-    { label: 'Training ROI',      value: '2.4×',    cls: 'pos' },
-    { label: 'Working Capital',   value: '42 days', cls: 'pos' },
+  const tickerSkills = [
+    'Machine Learning', 'Python', 'R', 'SQL', 'Excel',
+    'PowerPoint', 'Word', 'Neural Networks', 'Clustering',
+    'LLMs', 'Gen-AI', 'Stakeholder Management', 'Research',
+    'Power BI', 'Tableau', 'n8n', 'Automation', 'KNIME',
+    'QlikSense', 'MS-Project',
   ];
 
   const track = document.getElementById('ticker-track');
   if (track) {
-    // Duplicate items for seamless loop
-    const html = [...tickerItems, ...tickerItems].map(({ label, value, cls }) =>
-      `<span class="tick-item ${cls}">${label}: <strong>${value}</strong></span><span class="tick-sep">|</span>`
+    const html = [...tickerSkills, ...tickerSkills].map(skill =>
+      `<span class="tick-item">⬡ ${skill}</span><span class="tick-sep">·</span>`
     ).join('');
     track.innerHTML = html;
   }
@@ -371,7 +361,22 @@
   });
 
   /* ══════════════════════════════════════════════
-     14. CONTACT FORM (Formspree AJAX)
+     14. LEARNING — TABS + ACCORDIONS
+  ══════════════════════════════════════════════ */
+
+  // Topic tabs
+  document.querySelectorAll('.ltab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.ltab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.learn-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      const panel = document.getElementById('ltab-' + tab.dataset.ltab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* ══════════════════════════════════════════════
+     15. CONTACT FORM (Formspree AJAX)
   ══════════════════════════════════════════════ */
   const form    = document.getElementById('contact-form');
   const fBtn    = document.getElementById('form-submit');

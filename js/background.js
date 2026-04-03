@@ -26,7 +26,7 @@
   const MAX_PAIRS    = 600;
 
   // Experimental palette: DeFi Data — deep navy/indigo/electric-yellow
-  const COLORS = [0x222A59, 0x5666BF, 0x5670BF, 0x0a1a38];
+  const COLORS = [0x6366F1, 0x8B5CF6, 0xB45309, 0xA78BFA];
 
   /* ── Nodes ───────────────────────────────────────────── */
   const meshes = [], vels = [];
@@ -62,9 +62,9 @@
   lineGeo.setDrawRange(0, 0);
 
   const lineMat = new THREE.LineBasicMaterial({
-    color: 0x1a3060,   // dark navy lines
+    color: 0x4338CA,   // deep indigo lines
     transparent: true,
-    opacity: 0.18,
+    opacity: 0.12,
   });
   scene.add(new THREE.LineSegments(lineGeo, lineMat));
 
