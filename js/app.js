@@ -231,25 +231,25 @@
     const next    = document.getElementById(targetId);
     if (!next || next === current) return;
 
-    // Mark active nav item
+    // Update nav + navbar immediately
     navLinks.forEach(l => l.classList.toggle('active', l.dataset.page === targetId));
+    if (navbar) navbar.classList.toggle('scrolled', targetId !== 'hero');
 
-    // Animate out current, then swap
-    if (current) {
-      current.classList.add('page-out');
-      setTimeout(() => {
-        current.classList.remove('active', 'page-out');
-      }, 250);
+    // Dispatch event so animations.js can react (nav pill, section-specific effects)
+    document.dispatchEvent(new CustomEvent('pageswitch', { detail: { from: current?.id, to: targetId } }));
+
+    // Delegate visual transition to animations.js if registered
+    if (typeof window.doPageWipe === 'function') {
+      window.doPageWipe(current, next);
+      return;
     }
 
-    // Small delay so page-out starts first
-    setTimeout(() => {
-      next.classList.add('active');
-      next.scrollTop = 0; // reset internal scroll
-    }, 80);
-
-    // Navbar scrolled state — always show scrolled style when not on hero
-    if (navbar) navbar.classList.toggle('scrolled', targetId !== 'hero');
+    // Fallback: original CSS fade
+    if (current) {
+      current.classList.add('page-out');
+      setTimeout(() => current.classList.remove('active', 'page-out'), 250);
+    }
+    setTimeout(() => { next.classList.add('active'); next.scrollTop = 0; }, 80);
   }
 
   // Wire all [data-page] links

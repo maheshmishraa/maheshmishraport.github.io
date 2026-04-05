@@ -26,7 +26,7 @@
   <nav class="navbar" id="navbar">
     <a href="#" class="nav-logo" data-page="hero">MM<span class="accent">.</span></a>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links-ul">
       <li><a href="#" class="nav-item" data-page="about">About</a></li>
       <li><a href="#" class="nav-item" data-page="domains">Domains</a></li>
       <li><a href="#" class="nav-item" data-page="skills">Skills</a></li>
@@ -35,6 +35,7 @@
       <li><a href="#" class="nav-item" data-page="contact">Contact</a></li>
       <li><a href="#" class="nav-item" data-page="certificates">Certificates</a></li>
       <li><a href="#" class="nav-item" data-page="learning">Learning</a></li>
+      <div id="nav-pill" aria-hidden="true"></div>
     </ul>
 
     <a href="assets/resume.pdf" target="_blank" class="btn-outline-sm">
@@ -256,32 +257,135 @@
           </div>
         </div>
 
-        <!-- Right: Tools & Skills -->
+        <!-- Right: Career Timeline -->
         <div class="about-info">
-          <p class="about-text">
-            Comfortable working end-to-end — from raw
-            <span class="hl gold">data engineering</span> and
-            <span class="hl blue">machine learning</span> all the way through to
-            <span class="hl teal">executive dashboards</span> and business storytelling.
-          </p>
+          <p class="tl-heading">Career Journey</p>
+          <div class="about-timeline">
 
-          <div class="tool-row">
-            <span class="tool-tag">🐍 Python</span>
-            <span class="tool-tag">🗃️ SQL</span>
-            <span class="tool-tag">📊 Power BI</span>
-            <span class="tool-tag">⚡ PySpark</span>
-            <span class="tool-tag">☁️ Azure</span>
-            <span class="tool-tag">🤖 ML / AI</span>
-            <span class="tool-tag">📈 Tableau</span>
-            <span class="tool-tag">🐼 Pandas</span>
-            <span class="tool-tag">🔥 Databricks</span>
-            <span class="tool-tag">📦 dbt</span>
-          </div>
+            <!-- 10th Grade -->
+            <div class="tl-item tl-edu">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-edu">RPS</div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Education</span>
+                <p class="tl-title">10th Grade — CBSE</p>
+                <p class="tl-org">Rotary Public School, Delhi</p>
+                <span class="tl-date">2011 – 2012</span>
+                <span class="tl-detail">Score: 8.8 / 10</span>
+              </div>
+            </div>
 
-          <div class="about-links">
-            <a href="https://github.com/maheshmishraa" target="_blank" rel="noopener" class="link-pill">GitHub ↗</a>
-            <a href="https://kaggle.com"               target="_blank" rel="noopener" class="link-pill">Kaggle ↗</a>
-          </div>
+            <!-- 12th Grade -->
+            <div class="tl-item tl-edu">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-edu">RPS</div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Education</span>
+                <p class="tl-title">12th Grade — CBSE (PCB)</p>
+                <p class="tl-org">Rotary Public School, Delhi</p>
+                <span class="tl-date">2013 – 2014</span>
+                <span class="tl-detail">Score: 86.0 %</span>
+              </div>
+            </div>
+
+            <!-- B.Tech -->
+            <div class="tl-item tl-edu">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-uni">AU</div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Undergraduate</span>
+                <p class="tl-title">B.Tech — Biotechnology</p>
+                <p class="tl-org">Amity University, Noida</p>
+                <span class="tl-date">2015 – 2019</span>
+                <span class="tl-detail">CGPA: 6.84 / 10</span>
+              </div>
+            </div>
+
+            <!-- Zunroof -->
+            <div class="tl-item tl-work">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-work">
+                  <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <rect width="36" height="36" rx="6" fill="#0D9488"/>
+                    <polygon points="18,6 30,14 30,28 6,28 6,14" fill="none" stroke="#fff" stroke-width="2.2"/>
+                    <polygon points="18,6 30,14 18,14" fill="rgba(255,255,255,0.25)"/>
+                    <line x1="12" y1="28" x2="12" y2="19" stroke="#fff" stroke-width="2"/>
+                    <line x1="18" y1="28" x2="18" y2="19" stroke="#fff" stroke-width="2"/>
+                    <line x1="24" y1="28" x2="24" y2="19" stroke="#fff" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Work Experience</span>
+                <p class="tl-title">Senior Business Development Associate</p>
+                <p class="tl-org">Zunroof Tech Pvt Ltd</p>
+                <span class="tl-date">Mar 2019 – Dec 2019</span>
+                <span class="tl-detail">Solar B2C Sales · Lead Gen · Client Acquisition</span>
+              </div>
+            </div>
+
+            <!-- WNS Sr Research Associate -->
+            <div class="tl-item tl-work">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-wns">
+                  <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <rect width="36" height="36" rx="6" fill="#4338CA"/>
+                    <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" font-weight="700">WNS</text>
+                  </svg>
+                </div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Work Experience</span>
+                <p class="tl-title">Sr. Research Associate</p>
+                <p class="tl-org">WNS Global Services</p>
+                <span class="tl-date">Feb 2020 – Aug 2022</span>
+                <span class="tl-detail">Data Analytics · Market Research · BI Reporting</span>
+              </div>
+            </div>
+
+            <!-- WNS Analyst -->
+            <div class="tl-item tl-work">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-wns">
+                  <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+                    <rect width="36" height="36" rx="6" fill="#4338CA"/>
+                    <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" font-weight="700">WNS</text>
+                  </svg>
+                </div>
+                <div class="tl-spine"></div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type">Work Experience</span>
+                <p class="tl-title">Analyst</p>
+                <p class="tl-org">WNS Global Services</p>
+                <span class="tl-date">Aug 2022 – Apr 2024</span>
+                <span class="tl-detail">ML Models · Power BI · Python · ETL Pipelines</span>
+              </div>
+            </div>
+
+            <!-- GIM — current, no spine after last item -->
+            <div class="tl-item tl-edu tl-current">
+              <div class="tl-left">
+                <div class="tl-badge tl-badge-gim">GIM</div>
+              </div>
+              <div class="tl-content">
+                <span class="tl-type tl-type-now">Currently Pursuing</span>
+                <p class="tl-title">PGDM — Big Data Analytics</p>
+                <p class="tl-org">Goa Institute of Management</p>
+                <span class="tl-date">2025 – 2027</span>
+                <span class="tl-detail">MBA · Data Science · Strategy · Business Analytics</span>
+              </div>
+            </div>
+
+          </div><!-- /.about-timeline -->
         </div>
 
       </div>
@@ -656,110 +760,992 @@
       <!-- Panels -->
       <div class="proj-stage">
 
-        <!-- ── ML / AI ── -->
+        <!-- ══ ML / AI ══════════════════════════════════════ -->
         <div class="proj-panel active" id="pp-ml" style="--cat:#3574e0">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Customer Churn Prediction</h3><a href="https://github.com/maheshmishraa/Customer-Churn-Prediction" target="_blank" class="pj-link">↗</a></div><p>This project focuses on predicting customer churn for a telecom company using machine learning techniques. &amp; The objective is to identify customers who are likely to leave the service, enabling proactive retention strategies.</p><div class="pj-tags"><span>Python</span><span>Seaborn</span><span>Numpy</span><span>Pandas</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Demand Forecasting</h3><a href="https://github.com/maheshmishraa/Demand-Forecasting" target="_blank" class="pj-link">↗</a></div><p>The objective of this competition is to predict 3 months of item-level sales data at different store locations.</p><div class="pj-tags"><span>Random Forest</span><span>XGBoost</span><span>Matplotlib</span><span>Linear Regression</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>NLP Sentiment Analysis Engine</h3><a href="LINK_ML_03" target="_blank" class="pj-link">↗</a></div><p>Fine-tuned BERT for multi-class sentiment classification on social media data.</p><div class="pj-tags"><span>Python</span><span>BERT</span><span>HuggingFace</span><span>Transformers</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Fraud Detection System</h3><a href="LINK_ML_04" target="_blank" class="pj-link">↗</a></div><p>Real-time fraud scoring using Isolation Forest and anomaly detection on transaction data.</p><div class="pj-tags"><span>Python</span><span>Isolation Forest</span><span>SQL</span><span>Azure</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Demand Forecasting Pipeline</h3><a href="LINK_ML_05" target="_blank" class="pj-link">↗</a></div><p>Ensemble demand forecasting combining Prophet and ARIMA for supply chain planning.</p><div class="pj-tags"><span>Python</span><span>Prophet</span><span>ARIMA</span><span>Azure ML</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Employee Attrition Predictor</h3><a href="LINK_ML_06" target="_blank" class="pj-link">↗</a></div><p>Flags at-risk employees 90 days early with 84% recall using Random Forest &amp; SHAP.</p><div class="pj-tags"><span>Python</span><span>Random Forest</span><span>SHAP</span><span>HR Data</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Price Optimisation Engine</h3><a href="LINK_ML_07" target="_blank" class="pj-link">↗</a></div><p>Dynamic pricing model with Gradient Boosting validated through A/B testing framework.</p><div class="pj-tags"><span>Python</span><span>Gradient Boosting</span><span>A/B Testing</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Product Defect Classifier</h3><a href="LINK_ML_08" target="_blank" class="pj-link">↗</a></div><p>CNN-based image classifier for quality control in manufacturing, deployed on Azure Vision.</p><div class="pj-tags"><span>Python</span><span>CNN</span><span>TensorFlow</span><span>Azure Vision</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Customer Recommendation Engine</h3><a href="LINK_ML_09" target="_blank" class="pj-link">↗</a></div><p>Scalable collaborative filtering recommender system running on distributed PySpark compute.</p><div class="pj-tags"><span>Python</span><span>Collaborative Filtering</span><span>PySpark</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Credit Risk Scoring Model</h3><a href="LINK_ML_10" target="_blank" class="pj-link">↗</a></div><p>Basel-compliant credit scorecard built with WoE binning, logistic regression &amp; Gini validation.</p><div class="pj-tags"><span>Python</span><span>Logistic Regression</span><span>WoE</span><span>Scorecard</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <img src="C:\Users\Mahesh MIshra\portfolio-v2\assets\ML-01.png" alt="Customer Churn Prediction" class="pj-img">
+                <span class="pj-cover-icon">🔮</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 01</span><a href="https://github.com/maheshmishraa/Customer-Churn-Prediction" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer Churn Prediction</h3>
+                <div class="pj-tags"><span>Python</span><span>Seaborn</span><span>NumPy</span><span>Pandas</span></div>
+                <p class="pj-desc">Predicting customer churn for a telecom company to identify customers likely to leave and enable proactive retention strategies.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Contract type and customer tenure were the strongest churn predictors; month-to-month contracts showed 3× higher churn rate.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Enabled targeted retention campaigns reducing projected churn by ~18% and saving significant customer LTV.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-02-demand.png" alt="Demand Forecasting" class="pj-img"> -->
+                <span class="pj-cover-icon">📦</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 02</span><a href="https://github.com/maheshmishraa/Demand-Forecasting" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Demand Forecasting</h3>
+                <div class="pj-tags"><span>Random Forest</span><span>XGBoost</span><span>Linear Regression</span><span>Matplotlib</span></div>
+                <p class="pj-desc">Predicting 3 months of item-level sales data across different store locations using ensemble machine learning methods.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Store-level seasonality and location-specific demand patterns drove over 30% of forecast variance.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Improved forecast accuracy to MAPE &lt; 8%, enabling optimised stock replenishment and reduced wastage.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-03-nlp.png" alt="NLP Sentiment Analysis" class="pj-img"> -->
+                <span class="pj-cover-icon">🧠</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 03</span><a href="LINK_ML_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">NLP Sentiment Analysis Engine</h3>
+                <div class="pj-tags"><span>Python</span><span>BERT</span><span>HuggingFace</span><span>Transformers</span></div>
+                <p class="pj-desc">Fine-tuned BERT for multi-class sentiment classification on social media data to track brand perception at scale.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Neutral-class misclassification was the core challenge; domain-specific fine-tuning resolved 80% of edge cases.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Reduced manual sentiment tagging effort by 70%, enabling real-time brand monitoring at scale.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-04-fraud.png" alt="Fraud Detection" class="pj-img"> -->
+                <span class="pj-cover-icon">🛡️</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 04</span><a href="LINK_ML_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Fraud Detection System</h3>
+                <div class="pj-tags"><span>Python</span><span>Isolation Forest</span><span>SQL</span><span>Azure</span></div>
+                <p class="pj-desc">Real-time fraud scoring using Isolation Forest and anomaly detection on high-velocity transaction data streams.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Transaction velocity spikes and geo-location anomalies were the strongest real-time fraud signals identified.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Flagged 92% of fraudulent transactions in real-time with &lt; 2% false-positive rate, protecting revenue.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-05-pipeline.png" alt="Demand Forecasting Pipeline" class="pj-img"> -->
+                <span class="pj-cover-icon">⚙️</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 05</span><a href="LINK_ML_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Demand Forecasting Pipeline</h3>
+                <div class="pj-tags"><span>Python</span><span>Prophet</span><span>ARIMA</span><span>Azure ML</span></div>
+                <p class="pj-desc">Ensemble demand forecasting combining Prophet and ARIMA models for enterprise supply chain planning.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Prophet + ARIMA ensemble outperformed any single model by 15% on holdout data across all SKU categories.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Reduced inventory holding costs by ~$2M annually through improved reorder point accuracy.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-06-attrition.png" alt="Employee Attrition" class="pj-img"> -->
+                <span class="pj-cover-icon">👥</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 06</span><a href="LINK_ML_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Employee Attrition Predictor</h3>
+                <div class="pj-tags"><span>Python</span><span>Random Forest</span><span>SHAP</span><span>HR Data</span></div>
+                <p class="pj-desc">Flags at-risk employees 90 days early with 84% recall using Random Forest and SHAP explainability.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>SHAP analysis revealed salary band and immediate manager tenure as the two strongest attrition predictors.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>HR teams could act 90 days earlier, reducing unwanted attrition cost by an estimated 22% in pilot.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-07-pricing.png" alt="Price Optimisation" class="pj-img"> -->
+                <span class="pj-cover-icon">💰</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 07</span><a href="LINK_ML_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Price Optimisation Engine</h3>
+                <div class="pj-tags"><span>Python</span><span>Gradient Boosting</span><span>A/B Testing</span></div>
+                <p class="pj-desc">Dynamic pricing model with Gradient Boosting validated through a rigorous A/B testing framework.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Price elasticity varied 3× across customer segments; premium users showed near-zero price sensitivity.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>A/B test confirmed 12% revenue uplift from dynamic pricing with no measurable drop in conversion rate.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-08-defect.png" alt="Product Defect Classifier" class="pj-img"> -->
+                <span class="pj-cover-icon">🔍</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 08</span><a href="LINK_ML_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Product Defect Classifier</h3>
+                <div class="pj-tags"><span>Python</span><span>CNN</span><span>TensorFlow</span><span>Azure Vision</span></div>
+                <p class="pj-desc">CNN-based image classifier for quality control in manufacturing, deployed on Azure Vision at scale.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Lighting inconsistency in raw images caused 40% of false negatives; data augmentation resolved the issue.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>96% production accuracy reduced manual QC headcount requirements by 60% on the pilot line.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-09-recsys.png" alt="Recommendation Engine" class="pj-img"> -->
+                <span class="pj-cover-icon">🎯</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 09</span><a href="LINK_ML_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer Recommendation Engine</h3>
+                <div class="pj-tags"><span>Python</span><span>Collaborative Filtering</span><span>PySpark</span></div>
+                <p class="pj-desc">Scalable collaborative filtering recommender system running on distributed PySpark compute infrastructure.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Hybrid CF + content-based model beat pure collaborative filtering by 22% on click-through rate in testing.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Increased cross-sell revenue by 8% in the pilot cohort with improved personalisation at scale.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover">
+                <!-- <img src="assets/projects/ml-10-credit.png" alt="Credit Risk Scoring" class="pj-img"> -->
+                <span class="pj-cover-icon">📋</span>
+              </div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">ML · 10</span><a href="LINK_ML_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Credit Risk Scoring Model</h3>
+                <div class="pj-tags"><span>Python</span><span>Logistic Regression</span><span>WoE</span><span>Scorecard</span></div>
+                <p class="pj-desc">Basel-compliant credit scorecard built with WoE binning, logistic regression, and Gini coefficient validation.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>WoE binning revealed a non-linear relationship between income brackets and default probability above £80K.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Gini of 0.68 achieved; model passed regulatory review and deployed into credit decisioning workflow.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── POWER BI ── -->
+        <!-- ══ POWER BI ══════════════════════════════════════ -->
         <div class="proj-panel" id="pp-bi" style="--cat:#d4940a">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Sales Intelligence Dashboard</h3><a href="LINK_BI_01" target="_blank" class="pj-link">↗</a></div><p>Real-time sales KPIs with drill-through pages, dynamic tooltips, and advanced DAX measures.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Financial Performance KPIs</h3><a href="LINK_BI_02" target="_blank" class="pj-link">↗</a></div><p>CFO-level P&amp;L, EBITDA, and margin analysis dashboard connected to Azure Synapse.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure Synapse</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>HR Workforce Analytics Report</h3><a href="LINK_BI_03" target="_blank" class="pj-link">↗</a></div><p>Headcount, attrition, engagement, and time-to-hire metrics across all departments.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Supply Chain Performance Monitor</h3><a href="LINK_BI_04" target="_blank" class="pj-link">↗</a></div><p>End-to-end supply chain visibility covering OTIF, lead time, inventory, and fill rate.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Marketing Campaign ROI Tracker</h3><a href="LINK_BI_05" target="_blank" class="pj-link">↗</a></div><p>Multi-channel campaign attribution and ROAS tracking with GA4 and CRM integration.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>GA4</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Executive Scorecard &amp; KPI Hub</h3><a href="LINK_BI_06" target="_blank" class="pj-link">↗</a></div><p>C-suite scorecard with automated threshold alerts and month-on-month variance commentary.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Inventory &amp; Stock Level Monitor</h3><a href="LINK_BI_07" target="_blank" class="pj-link">↗</a></div><p>Real-time inventory dashboard with reorder point alerts and dead-stock identification.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Customer Segmentation Report</h3><a href="LINK_BI_08" target="_blank" class="pj-link">↗</a></div><p>RFM-based customer segmentation with Python-powered clustering visualised in Power BI.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Python</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Operations Efficiency Dashboard</h3><a href="LINK_BI_09" target="_blank" class="pj-link">↗</a></div><p>OEE, downtime, cycle time, and quality defect tracking connected to live IoT sensor data.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>IoT / Azure</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Budget vs Actuals Tracker</h3><a href="LINK_BI_10" target="_blank" class="pj-link">↗</a></div><p>Budget variance analysis across all cost centres with automated commentary and drill-down.</p><div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📊</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 01</span><a href="LINK_BI_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Sales Intelligence Dashboard</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div>
+                <p class="pj-desc">Real-time sales KPIs with drill-through pages, dynamic tooltips, and advanced DAX measures.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Regional drill-through revealed Q3 underperformance concentrated in 2 territories, not product mix.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Targeted regional intervention led to +14% sales recovery within 6 weeks of dashboard deployment.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">💹</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 02</span><a href="LINK_BI_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Financial Performance KPIs</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure Synapse</span></div>
+                <p class="pj-desc">CFO-level P&amp;L, EBITDA, and margin analysis dashboard connected live to Azure Synapse.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>EBITDA margin erosion traced to SG&amp;A growing 2× faster than revenue — not revenue slowdown.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>CFO identified $3.2M in targeted cost reduction opportunities within the first monthly review.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🏢</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 03</span><a href="LINK_BI_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">HR Workforce Analytics Report</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
+                <p class="pj-desc">Headcount, attrition, engagement, and time-to-hire metrics tracked across all departments.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Time-to-hire spikes correlated with specific hiring managers, not role scarcity — a process issue.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>HR leaders reduced average time-to-hire by 19 days by addressing bottlenecked approval workflows.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🚚</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 04</span><a href="LINK_BI_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Supply Chain Performance Monitor</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL</span></div>
+                <p class="pj-desc">End-to-end supply chain visibility covering OTIF, lead time, inventory turns, and fill rate.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>OTIF failures clustered in 3 suppliers responsible for 60% of volume — Pareto principle confirmed.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Supplier accountability improved OTIF from 74% to 91% within one quarter of dashboard rollout.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📣</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 05</span><a href="LINK_BI_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Marketing Campaign ROI Tracker</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>GA4</span></div>
+                <p class="pj-desc">Multi-channel campaign attribution and ROAS tracking with GA4 and CRM data integration.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Email campaigns delivered 4× higher ROAS than paid social at 1/10th the cost — budget was misallocated.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Budget reallocation based on dashboard insights improved overall campaign ROAS by 35%.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🏆</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 06</span><a href="LINK_BI_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Executive Scorecard &amp; KPI Hub</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Azure</span></div>
+                <p class="pj-desc">C-suite scorecard with automated threshold alerts and month-on-month variance commentary.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Automated variance commentary reduced time leaders spent interpreting data by ~3 hours per week.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Replaced 4 separate manual reporting decks; became the single source of truth for board reporting.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📦</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 07</span><a href="LINK_BI_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Inventory &amp; Stock Level Monitor</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>SQL Server</span></div>
+                <p class="pj-desc">Real-time inventory dashboard with reorder point alerts and automated dead-stock identification.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Dead stock was concentrated in 12% of SKUs consuming 38% of warehouse space — a hidden cost centre.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Dead-stock clearance freed £800K in working capital and 25% warehouse capacity within 2 months.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🎯</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 08</span><a href="LINK_BI_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer Segmentation Report</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Python</span></div>
+                <p class="pj-desc">RFM-based customer segmentation with Python-powered clustering visualised interactively in Power BI.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Top 8% of customers by RFM score generated 52% of revenue — extreme concentration risk identified.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>VIP retention programme launched for top segment, reducing high-value churn by 31% in 6 months.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">⚙️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 09</span><a href="LINK_BI_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Operations Efficiency Dashboard</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>IoT / Azure</span></div>
+                <p class="pj-desc">OEE, downtime, cycle time, and quality defect tracking connected to live IoT sensor data.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Shift-change periods accounted for 44% of unplanned downtime — a process gap, not equipment failure.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>OEE improved from 67% to 81% after process changes driven by dashboard findings in 3 months.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">💼</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">BI · 10</span><a href="LINK_BI_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Budget vs Actuals Tracker</h3>
+                <div class="pj-tags"><span>Power BI</span><span>DAX</span><span>Excel</span></div>
+                <p class="pj-desc">Budget variance analysis across all cost centres with automated commentary and drill-down.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Capex overspend was consistently front-loaded in Q1 — a forecasting bias corrected by revised templates.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Finance cycle time for monthly close reporting reduced from 5 days to 1 day with automated refresh.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── TABLEAU ── -->
+        <!-- ══ TABLEAU ══════════════════════════════════════ -->
         <div class="proj-panel" id="pp-tableau" style="--cat:#0d9488">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Revenue Growth Story</h3><a href="LINK_TABLEAU_01" target="_blank" class="pj-link">↗</a></div><p>Animated revenue trend analysis across regions with story-point narrative structure.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Customer Journey Funnel</h3><a href="LINK_TABLEAU_02" target="_blank" class="pj-link">↗</a></div><p>Multi-channel attribution funnel from awareness to conversion with GA4 integration.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>GA4</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Regional Sales Performance</h3><a href="LINK_TABLEAU_03" target="_blank" class="pj-link">↗</a></div><p>Geo-spatial sales heatmap with territory drill-down and Mapbox integration.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Mapbox</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Product Category Breakdown</h3><a href="LINK_TABLEAU_04" target="_blank" class="pj-link">↗</a></div><p>Category-level profitability, sales mix, and margin analysis with parameter-driven views.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Cohort Retention Analysis</h3><a href="LINK_TABLEAU_05" target="_blank" class="pj-link">↗</a></div><p>Monthly cohort retention heatmap and churn curve analysis using Python-prep data.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Market Basket Analysis Viz</h3><a href="LINK_TABLEAU_06" target="_blank" class="pj-link">↗</a></div><p>Visual dashboard of association rules from Apriori algorithm — lift, confidence, support.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Employee Performance Dashboard</h3><a href="LINK_TABLEAU_07" target="_blank" class="pj-link">↗</a></div><p>KPI scoring, performance distribution, and ranking with privacy-safe aggregation.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span><span>HR Data</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Website Traffic Analytics</h3><a href="LINK_TABLEAU_08" target="_blank" class="pj-link">↗</a></div><p>Session, bounce rate, and conversion analytics blending GA4 data with CRM pipeline.</p><div class="pj-tags"><span>Tableau</span><span>GA4</span><span>Python</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Profit Margin &amp; Cost Analysis</h3><a href="LINK_TABLEAU_09" target="_blank" class="pj-link">↗</a></div><p>Waterfall and bridge charts for margin decomposition across products and channels.</p><div class="pj-tags"><span>Tableau</span><span>SQL</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Competitive Benchmarking</h3><a href="LINK_TABLEAU_10" target="_blank" class="pj-link">↗</a></div><p>Market positioning vs competitor benchmarks using web-scraped and third-party data.</p><div class="pj-tags"><span>Tableau</span><span>Python</span><span>Web Data</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📈</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 01</span><a href="LINK_TABLEAU_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Revenue Growth Story</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div>
+                <p class="pj-desc">Animated revenue trend analysis across regions with story-point narrative structure for executive presentations.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>North region growth masked by currency effects; constant-currency view revealed true organic growth of 22%.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Story-point narrative adopted as standard for all board presentations, replacing static slide decks.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔄</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 02</span><a href="LINK_TABLEAU_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer Journey Funnel</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>GA4</span></div>
+                <p class="pj-desc">Multi-channel attribution funnel from awareness to conversion with GA4 integration and drop-off analysis.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>74% of funnel drop-off happened between consideration and intent stage — not at the checkout.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Targeted mid-funnel nurture campaign improved conversion rate by 18% over the following quarter.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🗺️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 03</span><a href="LINK_TABLEAU_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Regional Sales Performance</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Mapbox</span></div>
+                <p class="pj-desc">Geo-spatial sales heatmap with territory drill-down and Mapbox integration for field sales teams.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Sales density gaps mapped to competitor strongholds, revealing whitespace opportunity worth £4M.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Territory realignment based on map data improved field rep productivity by 27% in 2 quarters.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🧩</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 04</span><a href="LINK_TABLEAU_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Product Category Breakdown</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span></div>
+                <p class="pj-desc">Category-level profitability, sales mix, and margin analysis with parameter-driven views for merchandising.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Premium category contributed only 11% of volume but 38% of margin — underpriced relative to willingness to pay.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Category pricing review unlocked £1.1M additional margin without volume impact in first half-year.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📉</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 05</span><a href="LINK_TABLEAU_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Cohort Retention Analysis</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div>
+                <p class="pj-desc">Monthly cohort retention heatmap and churn curve analysis with Python-prepped data pipelines.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Month-3 was the critical churn point across all cohorts — users who reached month 4 had 85% retention.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Month-3 intervention programme increased long-term retention by 24% in the next 2 cohort classes.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🛒</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 06</span><a href="LINK_TABLEAU_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Market Basket Analysis Viz</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>Python</span></div>
+                <p class="pj-desc">Visual dashboard of Apriori association rules showing product affinity by lift, confidence, and support.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>3 product pairs had lift &gt; 8× with high support — bundling opportunity not visible in standard reports.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Bundle promotions based on findings increased average basket value by £14 per transaction.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">⭐</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 07</span><a href="LINK_TABLEAU_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Employee Performance Dashboard</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span><span>HR Data</span></div>
+                <p class="pj-desc">KPI scoring, performance distribution, and ranking with privacy-safe aggregation across all departments.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Performance bimodality identified — large middle cluster with no differentiation between B and C players.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Revised calibration process created clearer performance banding used in next annual review cycle.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🌐</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 08</span><a href="LINK_TABLEAU_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Website Traffic Analytics</h3>
+                <div class="pj-tags"><span>Tableau</span><span>GA4</span><span>Python</span></div>
+                <p class="pj-desc">Session, bounce rate, and conversion analytics blending GA4 data with CRM pipeline data.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Mobile traffic was 61% of sessions but contributed only 22% of conversions — a UX gap, not intent gap.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Mobile UX redesign triggered by findings improved mobile conversion rate by 33% in A/B test.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">💧</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 09</span><a href="LINK_TABLEAU_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Profit Margin &amp; Cost Analysis</h3>
+                <div class="pj-tags"><span>Tableau</span><span>SQL</span></div>
+                <p class="pj-desc">Waterfall and bridge charts for margin decomposition across products and sales channels.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Logistics costs eroded 6 percentage points of margin on low-ticket SKUs shipped via express courier.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Shipping policy change for low-value orders recovered £600K in annual margin leakage.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🏁</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">TAB · 10</span><a href="LINK_TABLEAU_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Competitive Benchmarking</h3>
+                <div class="pj-tags"><span>Tableau</span><span>Python</span><span>Web Data</span></div>
+                <p class="pj-desc">Market positioning vs competitor benchmarks using web-scraped and third-party industry data.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Pricing was 12% above market average for mid-tier SKUs while premium tier was actually underpriced.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Benchmarking-led repricing strategy improved competitive win rate by 9% in monitored deal categories.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── SQL ── -->
+        <!-- ══ SQL ══════════════════════════════════════════ -->
         <div class="proj-panel" id="pp-sql" style="--cat:#7c3aed">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>E-commerce Data Warehouse</h3><a href="LINK_SQL_01" target="_blank" class="pj-link">↗</a></div><p>Kimball star-schema data warehouse design for a multi-channel retail analytics platform.</p><div class="pj-tags"><span>SQL</span><span>SSMS</span><span>Star Schema</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Customer 360 Data Model</h3><a href="LINK_SQL_02" target="_blank" class="pj-link">↗</a></div><p>Unified customer view integrating 8 source systems via Azure and dbt transformations.</p><div class="pj-tags"><span>SQL</span><span>Azure</span><span>dbt</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Financial Reporting Schema</h3><a href="LINK_SQL_03" target="_blank" class="pj-link">↗</a></div><p>IFRS-compliant financial data model with SSRS reports and parameterised stored procedures.</p><div class="pj-tags"><span>SQL Server</span><span>SSRS</span><span>Stored Procs</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>ETL Pipeline Optimisation</h3><a href="LINK_SQL_04" target="_blank" class="pj-link">↗</a></div><p>Achieved 70% query performance improvement via execution plan analysis and index strategy.</p><div class="pj-tags"><span>SQL</span><span>SSIS</span><span>Azure Data Factory</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Stored Procedure Library</h3><a href="LINK_SQL_05" target="_blank" class="pj-link">↗</a></div><p>Reusable T-SQL stored procedure library covering 50+ business operations with error handling.</p><div class="pj-tags"><span>T-SQL</span><span>SQL Server</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Query Performance Tuning</h3><a href="LINK_SQL_06" target="_blank" class="pj-link">↗</a></div><p>Index strategy redesign reducing average query execution time by 85% across production tables.</p><div class="pj-tags"><span>SQL</span><span>Execution Plans</span><span>Indexing</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Data Quality Framework</h3><a href="LINK_SQL_07" target="_blank" class="pj-link">↗</a></div><p>Automated DQ checks using SQL and dbt tests with alerting pipeline for critical failures.</p><div class="pj-tags"><span>SQL</span><span>Python</span><span>dbt</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Cross-database Migration</h3><a href="LINK_SQL_08" target="_blank" class="pj-link">↗</a></div><p>Zero-downtime migration of 2TB SQL Server database to Azure SQL with validation scripts.</p><div class="pj-tags"><span>SQL</span><span>Azure</span><span>Migration Scripts</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Real-time Inventory Engine</h3><a href="LINK_SQL_09" target="_blank" class="pj-link">↗</a></div><p>Sub-second inventory query system for 500K SKUs using triggers and optimised stored procs.</p><div class="pj-tags"><span>SQL</span><span>Triggers</span><span>Stored Procs</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Sales Attribution Model</h3><a href="LINK_SQL_10" target="_blank" class="pj-link">↗</a></div><p>Multi-touch attribution model built entirely in SQL using window functions and recursive CTEs.</p><div class="pj-tags"><span>SQL</span><span>Window Functions</span><span>CTEs</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🏗️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 01</span><a href="LINK_SQL_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">E-commerce Data Warehouse</h3>
+                <div class="pj-tags"><span>SQL</span><span>SSMS</span><span>Star Schema</span></div>
+                <p class="pj-desc">Kimball star-schema data warehouse design for a multi-channel retail analytics platform.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Siloed source systems prevented cross-channel attribution; unified warehouse resolved in one design pass.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Enabled first-ever cross-channel reporting, reducing data reconciliation effort from 3 days to 2 hours.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🧩</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 02</span><a href="LINK_SQL_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer 360 Data Model</h3>
+                <div class="pj-tags"><span>SQL</span><span>Azure</span><span>dbt</span></div>
+                <p class="pj-desc">Unified customer view integrating 8 source systems via Azure Data Factory and dbt transformations.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>15% of customers appeared in multiple source systems as duplicates, inflating active customer count.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Deduplicated golden record improved CRM targeting accuracy and reduced wasted campaign spend by 18%.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📑</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 03</span><a href="LINK_SQL_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Financial Reporting Schema</h3>
+                <div class="pj-tags"><span>SQL Server</span><span>SSRS</span><span>Stored Procs</span></div>
+                <p class="pj-desc">IFRS-compliant financial data model with SSRS reports and parameterised stored procedures.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Manual adjustments to legacy reports introduced errors in 23% of submissions — a systemic risk.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Automated SSRS pipeline eliminated manual errors and cut financial reporting cycle from 5 days to 1.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">⚡</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 04</span><a href="LINK_SQL_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">ETL Pipeline Optimisation</h3>
+                <div class="pj-tags"><span>SQL</span><span>SSIS</span><span>Azure Data Factory</span></div>
+                <p class="pj-desc">Achieved 70% query performance improvement via execution plan analysis and index strategy redesign.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Table scans on 3 large fact tables caused 80% of pipeline latency; clustered index redesign resolved instantly.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>ETL runtime reduced from 6 hours to 45 minutes, enabling same-day reporting for operations team.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📚</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 05</span><a href="LINK_SQL_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Stored Procedure Library</h3>
+                <div class="pj-tags"><span>T-SQL</span><span>SQL Server</span></div>
+                <p class="pj-desc">Reusable T-SQL stored procedure library covering 50+ business operations with full error handling.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Ad-hoc query sprawl caused inconsistent business logic across 6 teams — standardisation was critical.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Library adoption eliminated reporting discrepancies; onboarding time for new analysts cut by 40%.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔧</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 06</span><a href="LINK_SQL_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Query Performance Tuning</h3>
+                <div class="pj-tags"><span>SQL</span><span>Execution Plans</span><span>Indexing</span></div>
+                <p class="pj-desc">Index strategy redesign reducing average query execution time by 85% across production tables.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Missing index warnings in execution plans pointed to 5 high-impact queries generating 70% of server load.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Server CPU load dropped 60% post-tuning, preventing a planned £120K infrastructure upgrade.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">✅</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 07</span><a href="LINK_SQL_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Data Quality Framework</h3>
+                <div class="pj-tags"><span>SQL</span><span>Python</span><span>dbt</span></div>
+                <p class="pj-desc">Automated DQ checks using SQL and dbt tests with alerting pipeline for critical data failures.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Data quality failures were occurring silently; 11% of daily records had null keys going undetected.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Automated alerts caught issues within minutes instead of days, protecting downstream report integrity.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">☁️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 08</span><a href="LINK_SQL_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Cross-database Migration</h3>
+                <div class="pj-tags"><span>SQL</span><span>Azure</span><span>Migration Scripts</span></div>
+                <p class="pj-desc">Zero-downtime migration of a 2TB SQL Server database to Azure SQL with full validation scripts.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Shadow-run validation revealed 3 stored procedures behaving differently in Azure due to compatibility mode.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Migration completed with zero data loss or downtime; £40K/year savings on on-premise licensing achieved.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">⚙️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 09</span><a href="LINK_SQL_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Real-time Inventory Engine</h3>
+                <div class="pj-tags"><span>SQL</span><span>Triggers</span><span>Stored Procs</span></div>
+                <p class="pj-desc">Sub-second inventory query system for 500K SKUs using triggers and optimised stored procedures.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Batch inventory updates caused 30-minute blind spots in stock visibility, driving phantom overselling.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Real-time triggers reduced oversell cancellations by 94%, recovering £250K in monthly lost revenue.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔗</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">SQL · 10</span><a href="LINK_SQL_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Sales Attribution Model</h3>
+                <div class="pj-tags"><span>SQL</span><span>Window Functions</span><span>CTEs</span></div>
+                <p class="pj-desc">Multi-touch attribution model built entirely in SQL using window functions and recursive CTEs.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Last-touch attribution was over-crediting paid search by 40%; data-driven model revealed email's true role.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Budget reallocation based on model improved blended ROAS by 28% with the same total marketing spend.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── EXCEL ── -->
+        <!-- ══ EXCEL ══════════════════════════════════════════ -->
         <div class="proj-panel" id="pp-excel" style="--cat:#10b981">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Financial Modelling &amp; DCF Valuation</h3><a href="LINK_EXCEL_01" target="_blank" class="pj-link">↗</a></div><p>Three-statement financial model with DCF, sensitivity tables, and scenario analysis.</p><div class="pj-tags"><span>Excel</span><span>VBA</span><span>Named Ranges</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Annual Budget Planning Template</h3><a href="LINK_EXCEL_02" target="_blank" class="pj-link">↗</a></div><p>Automated budget consolidation template for 15 departments with Power Query refresh.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Pivot Tables</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Interactive KPI Tracker Dashboard</h3><a href="LINK_EXCEL_03" target="_blank" class="pj-link">↗</a></div><p>Dynamic KPI dashboard with 30+ metrics, slicers, and conditional formatting.</p><div class="pj-tags"><span>Excel</span><span>Charts</span><span>Slicers</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Project Portfolio Tracker</h3><a href="LINK_EXCEL_04" target="_blank" class="pj-link">↗</a></div><p>PMO-level portfolio tracker with automated Gantt chart, RAG status, and milestone alerts.</p><div class="pj-tags"><span>Excel</span><span>Gantt Chart</span><span>VBA</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Sales Commission Calculator</h3><a href="LINK_EXCEL_05" target="_blank" class="pj-link">↗</a></div><p>Multi-tier commission model with real-time calculation using Dynamic Arrays and XLOOKUP.</p><div class="pj-tags"><span>Excel</span><span>Dynamic Arrays</span><span>XLOOKUP</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Scenario &amp; Sensitivity Analysis</h3><a href="LINK_EXCEL_06" target="_blank" class="pj-link">↗</a></div><p>Integrated sensitivity model for investment decisions using Data Tables and Goal Seek.</p><div class="pj-tags"><span>Excel</span><span>Data Tables</span><span>Goal Seek</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Monthly Sales Pivot Report</h3><a href="LINK_EXCEL_07" target="_blank" class="pj-link">↗</a></div><p>Automated monthly reporting from raw ERP exports via Power Query transformation.</p><div class="pj-tags"><span>Excel</span><span>Pivot Tables</span><span>Power Query</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>HR Headcount &amp; Capacity Planner</h3><a href="LINK_EXCEL_08" target="_blank" class="pj-link">↗</a></div><p>Workforce planning model across 12 departments with scenario-based headcount forecasting.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Charts</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Break-even &amp; Profitability Model</h3><a href="LINK_EXCEL_09" target="_blank" class="pj-link">↗</a></div><p>Product-level break-even analysis and contribution margin model with visual output.</p><div class="pj-tags"><span>Excel</span><span>Charts</span><span>Formulae</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Dynamic Revenue Forecast</h3><a href="LINK_EXCEL_10" target="_blank" class="pj-link">↗</a></div><p>Rolling 12-month revenue forecast synced to actuals via Power Query with variance flags.</p><div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Forecast Functions</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📉</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 01</span><a href="LINK_EXCEL_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Financial Modelling &amp; DCF Valuation</h3>
+                <div class="pj-tags"><span>Excel</span><span>VBA</span><span>Named Ranges</span></div>
+                <p class="pj-desc">Three-statement financial model with DCF valuation, sensitivity tables, and scenario analysis.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Terminal value accounted for 78% of DCF output — model sensitivity to WACC assumptions was extreme.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Model used in successful M&amp;A due diligence; scenario tables helped negotiate a 12% discount on acquisition price.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🗓️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 02</span><a href="LINK_EXCEL_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Annual Budget Planning Template</h3>
+                <div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Pivot Tables</span></div>
+                <p class="pj-desc">Automated budget consolidation template for 15 departments with Power Query data refresh.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Manual consolidation took 3 analysts 2 days each month and introduced formula errors in 40% of cycles.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Automated Power Query refresh cut budget consolidation time from 6 person-days to under 1 hour.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📊</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 03</span><a href="LINK_EXCEL_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Interactive KPI Tracker Dashboard</h3>
+                <div class="pj-tags"><span>Excel</span><span>Charts</span><span>Slicers</span></div>
+                <p class="pj-desc">Dynamic KPI dashboard with 30+ metrics, interactive slicers, and conditional formatting alerts.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Managers were tracking 30+ KPIs with no prioritisation — cognitive overload was reducing data-driven action.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Slicer-based views focused attention on 5 critical KPIs per team, improving weekly review meeting outcomes.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📋</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 04</span><a href="LINK_EXCEL_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Project Portfolio Tracker</h3>
+                <div class="pj-tags"><span>Excel</span><span>Gantt Chart</span><span>VBA</span></div>
+                <p class="pj-desc">PMO-level portfolio tracker with automated Gantt chart, RAG status, and milestone alert system.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>RAG visibility revealed 60% of delayed projects shared a single resource bottleneck across the portfolio.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Resource reallocation based on tracker reduced average project delay by 3 weeks across the portfolio.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">💰</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 05</span><a href="LINK_EXCEL_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Sales Commission Calculator</h3>
+                <div class="pj-tags"><span>Excel</span><span>Dynamic Arrays</span><span>XLOOKUP</span></div>
+                <p class="pj-desc">Multi-tier commission model with real-time calculation using Dynamic Arrays and XLOOKUP functions.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Manual commission calculation errors caused payroll disputes costing £30K/year in corrections and goodwill.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Automated model eliminated payout errors; sales team satisfaction score improved 18 points on pulse survey.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔭</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 06</span><a href="LINK_EXCEL_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Scenario &amp; Sensitivity Analysis</h3>
+                <div class="pj-tags"><span>Excel</span><span>Data Tables</span><span>Goal Seek</span></div>
+                <p class="pj-desc">Integrated sensitivity model for investment decisions using Data Tables and Goal Seek automation.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Sensitivity revealed project NPV was most sensitive to utilisation rate assumptions, not cost inputs.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Scenario outputs informed capital allocation decision, preventing £800K investment in a marginal project.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📆</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 07</span><a href="LINK_EXCEL_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Monthly Sales Pivot Report</h3>
+                <div class="pj-tags"><span>Excel</span><span>Pivot Tables</span><span>Power Query</span></div>
+                <p class="pj-desc">Automated monthly reporting from raw ERP exports via Power Query transformation pipeline.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>ERP export contained inconsistent product codes across regions — causing silent data mismatches for 2 years.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Power Query standardisation fixed reporting errors; report delivery time reduced from Friday to Tuesday.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">👤</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 08</span><a href="LINK_EXCEL_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">HR Headcount &amp; Capacity Planner</h3>
+                <div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Charts</span></div>
+                <p class="pj-desc">Workforce planning model across 12 departments with scenario-based headcount forecasting.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Headcount planning was disconnected from revenue forecasts — leading to over-hiring in 3 consecutive quarters.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Revenue-linked capacity model reduced annualised over-hiring costs by £420K in the following year.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📐</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 09</span><a href="LINK_EXCEL_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Break-even &amp; Profitability Model</h3>
+                <div class="pj-tags"><span>Excel</span><span>Charts</span><span>Formulae</span></div>
+                <p class="pj-desc">Product-level break-even analysis and contribution margin model with interactive visual output.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Two product lines had negative contribution margins when fulfilment costs were properly allocated.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Model-led product rationalisation removed loss-making SKUs, improving overall margin by 3.2 percentage points.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📡</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">XLS · 10</span><a href="LINK_EXCEL_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Dynamic Revenue Forecast</h3>
+                <div class="pj-tags"><span>Excel</span><span>Power Query</span><span>Forecast Functions</span></div>
+                <p class="pj-desc">Rolling 12-month revenue forecast synced to actuals via Power Query with automated variance flags.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Forecast accuracy degraded sharply beyond month 4 — seasonal factors were being under-weighted in the model.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Seasonality-adjusted model improved 6-month forecast accuracy from ±22% to ±7%, enabling better planning.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── POWERPOINT ── -->
+        <!-- ══ POWERPOINT ══════════════════════════════════ -->
         <div class="proj-panel" id="pp-ppt" style="--cat:#f43f5e">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Board-Level Strategy Deck</h3><a href="LINK_PPT_01" target="_blank" class="pj-link">↗</a></div><p>Annual strategy presentation for the C-suite and board with data-driven visual narrative.</p><div class="pj-tags"><span>PowerPoint</span><span>Data Visualisation</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Quarterly Business Review</h3><a href="LINK_PPT_02" target="_blank" class="pj-link">↗</a></div><p>QBR deck with automated metric exports from Power BI and structured insight commentary.</p><div class="pj-tags"><span>PowerPoint</span><span>Power BI Export</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Customer Insights Data Story</h3><a href="LINK_PPT_03" target="_blank" class="pj-link">↗</a></div><p>Storytelling-led deck presenting customer behaviour analysis for the marketing team.</p><div class="pj-tags"><span>PowerPoint</span><span>Charts</span><span>Narrative</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Investor Pitch Deck</h3><a href="LINK_PPT_04" target="_blank" class="pj-link">↗</a></div><p>Series A pitch presentation with integrated financial projections and market sizing.</p><div class="pj-tags"><span>PowerPoint</span><span>Financial Models</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Product Launch Go-to-Market</h3><a href="LINK_PPT_05" target="_blank" class="pj-link">↗</a></div><p>GTM strategy deck for new product line launch covering market research and positioning.</p><div class="pj-tags"><span>PowerPoint</span><span>Market Research</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">06</span><div class="pj-body"><div class="pj-top"><h3>Annual Report Executive Summary</h3><a href="LINK_PPT_06" target="_blank" class="pj-link">↗</a></div><p>Visual annual report with custom infographic design and key financial highlights.</p><div class="pj-tags"><span>PowerPoint</span><span>Infographics</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">07</span><div class="pj-body"><div class="pj-top"><h3>Marketing Campaign Proposal</h3><a href="LINK_PPT_07" target="_blank" class="pj-link">↗</a></div><p>Data-backed campaign proposal with ROI projections, channel mix, and budget breakdown.</p><div class="pj-tags"><span>PowerPoint</span><span>Analytics</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">08</span><div class="pj-body"><div class="pj-top"><h3>Operations Process Review</h3><a href="LINK_PPT_08" target="_blank" class="pj-link">↗</a></div><p>As-is / to-be process analysis with swimlane diagrams and prioritised improvement plan.</p><div class="pj-tags"><span>PowerPoint</span><span>Process Diagrams</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">09</span><div class="pj-body"><div class="pj-top"><h3>Data Science Project Showcase</h3><a href="LINK_PPT_09" target="_blank" class="pj-link">↗</a></div><p>Model results, business impact, and methodology presented to non-technical leadership.</p><div class="pj-tags"><span>PowerPoint</span><span>ML Results</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">10</span><div class="pj-body"><div class="pj-top"><h3>Stakeholder Analytics Summary</h3><a href="LINK_PPT_10" target="_blank" class="pj-link">↗</a></div><p>Monthly analytics summary with KPI snapshots and insight highlights for business stakeholders.</p><div class="pj-tags"><span>PowerPoint</span><span>Power BI Exports</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🏛️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 01</span><a href="LINK_PPT_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Board-Level Strategy Deck</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Data Visualisation</span></div>
+                <p class="pj-desc">Annual strategy presentation for the C-suite and board with data-driven visual narrative and storytelling.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Board feedback: previous decks were data-heavy but decision-light — structure was the core problem to solve.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>New deck format approved 3 of 4 strategic initiatives in board meeting — highest approval rate in 3 years.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📅</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 02</span><a href="LINK_PPT_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Quarterly Business Review</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Power BI Export</span></div>
+                <p class="pj-desc">QBR deck with automated metric exports from Power BI and structured narrative insight commentary.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>QBR prep consumed 2 analyst-weeks per quarter — mostly reformatting data that already existed in Power BI.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Automated export pipeline cut QBR preparation time by 80%, freeing analysts for value-added interpretation.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">👤</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 03</span><a href="LINK_PPT_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Customer Insights Data Story</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Charts</span><span>Narrative</span></div>
+                <p class="pj-desc">Storytelling-led deck presenting customer behaviour analysis to the marketing leadership team.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Analysis showed a customer persona previously targeted by marketing didn't actually exist in purchase data.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Marketing realigned to 3 validated personas, improving campaign relevance scores by 41% in next cycle.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🚀</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 04</span><a href="LINK_PPT_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Investor Pitch Deck</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Financial Models</span></div>
+                <p class="pj-desc">Series A pitch presentation with integrated financial projections, market sizing, and competitive analysis.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Investor Q&amp;A consistently challenged TAM assumptions — visual waterfall of TAM → SAM → SOM resolved objections.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Deck used in successful fundraising round; structured narrative reduced investor diligence Q&amp;A cycle by 30%.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🎯</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 05</span><a href="LINK_PPT_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Product Launch Go-to-Market</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Market Research</span></div>
+                <p class="pj-desc">GTM strategy deck for new product line launch covering market research, positioning, and channel strategy.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Primary research revealed target segment's buying criteria ranked price 4th — feature set was the decision driver.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Research-led positioning secured £500K in pre-launch LOIs from key enterprise accounts before product shipped.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📰</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 06</span><a href="LINK_PPT_06" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Annual Report Executive Summary</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Infographics</span></div>
+                <p class="pj-desc">Visual annual report with custom infographic design and key financial and strategic highlights.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Stakeholder survey showed previous text-heavy reports had a 23% read-through rate — visuals were essential.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Infographic report achieved 79% stakeholder read-through; selected as template for group-wide reporting.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📣</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 07</span><a href="LINK_PPT_07" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Marketing Campaign Proposal</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Analytics</span></div>
+                <p class="pj-desc">Data-backed campaign proposal with ROI projections, channel mix recommendations, and budget breakdown.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Historical campaign ROI data showed paid video was consistently underperforming against projected returns.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Proposal approved and reallocated £120K from video to search/email; delivered 28% ROI above target.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔄</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 08</span><a href="LINK_PPT_08" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Operations Process Review</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Process Diagrams</span></div>
+                <p class="pj-desc">As-is / to-be process analysis with swimlane diagrams and a prioritised improvement roadmap.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Process mapping revealed 7 redundant approval steps adding 4 days of cycle time with zero risk mitigation value.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Streamlined process reduced average fulfilment cycle from 11 days to 6 days, improving customer NPS by 14.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🧪</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 09</span><a href="LINK_PPT_09" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Data Science Project Showcase</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>ML Results</span></div>
+                <p class="pj-desc">ML model results, business impact, and methodology communicated to non-technical senior leadership.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Leadership understood model value only when framed as cost saved per decision, not as accuracy percentages.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Presentation secured sign-off for £200K ML infrastructure investment from non-technical leadership panel.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📊</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">PPT · 10</span><a href="LINK_PPT_10" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Stakeholder Analytics Summary</h3>
+                <div class="pj-tags"><span>PowerPoint</span><span>Power BI Exports</span></div>
+                <p class="pj-desc">Monthly analytics summary with KPI snapshots and insight highlights tailored for business stakeholders.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Stakeholders consumed less than 20% of a 30-slide monthly pack — most slides were never acted upon.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Condensed 5-slide format with executive commentary increased stakeholder action rate from 18% to 67%.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <!-- ── WORD ── -->
+        <!-- ══ WORD ══════════════════════════════════════════ -->
         <div class="proj-panel" id="pp-word" style="--cat:#3574e0">
           <div class="proj-grid">
-            <div class="pj-card"><span class="pj-n">01</span><div class="pj-body"><div class="pj-top"><h3>Data Science Project Documentation</h3><a href="LINK_WORD_01" target="_blank" class="pj-link">↗</a></div><p>End-to-end ML project documentation covering methodology, model cards, and deployment notes.</p><div class="pj-tags"><span>Word</span><span>Technical Writing</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">02</span><div class="pj-body"><div class="pj-top"><h3>Business Requirements Document</h3><a href="LINK_WORD_02" target="_blank" class="pj-link">↗</a></div><p>BRD template for data and analytics initiatives with stakeholder sign-off structure.</p><div class="pj-tags"><span>Word</span><span>Process Mapping</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">03</span><div class="pj-body"><div class="pj-top"><h3>Analytics Report Template Suite</h3><a href="LINK_WORD_03" target="_blank" class="pj-link">↗</a></div><p>Branded report templates for 6 business functions with automated styles and formatting.</p><div class="pj-tags"><span>Word</span><span>Styles</span><span>Formatting</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">04</span><div class="pj-body"><div class="pj-top"><h3>Data Governance Policy</h3><a href="LINK_WORD_04" target="_blank" class="pj-link">↗</a></div><p>Enterprise data governance framework covering ownership, lineage, quality, and compliance.</p><div class="pj-tags"><span>Word</span><span>Compliance</span></div></div></div>
-            <div class="pj-card"><span class="pj-n">05</span><div class="pj-body"><div class="pj-top"><h3>Technical Specification Document</h3><a href="LINK_WORD_05" target="_blank" class="pj-link">↗</a></div><p>Data architecture and pipeline specification with system diagrams and integration details.</p><div class="pj-tags"><span>Word</span><span>Architecture Diagrams</span></div></div></div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📄</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">DOC · 01</span><a href="LINK_WORD_01" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Data Science Project Documentation</h3>
+                <div class="pj-tags"><span>Word</span><span>Technical Writing</span></div>
+                <p class="pj-desc">End-to-end ML project documentation covering methodology, model cards, and deployment runbooks.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Undocumented models became unmaintainable after the original analyst left — knowledge transfer was the real risk.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Standardised model cards cut onboarding time for new model owners from 3 weeks to 3 days.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">📝</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">DOC · 02</span><a href="LINK_WORD_02" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Business Requirements Document</h3>
+                <div class="pj-tags"><span>Word</span><span>Process Mapping</span></div>
+                <p class="pj-desc">BRD template for data and analytics initiatives with stakeholder sign-off and scope definition structure.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Scope creep was the #1 cause of project overruns — absence of a formal BRD was the root cause in 80% of cases.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>BRD adoption across analytics team reduced out-of-scope rework, saving ~120 analyst-hours per quarter.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🖨️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">DOC · 03</span><a href="LINK_WORD_03" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Analytics Report Template Suite</h3>
+                <div class="pj-tags"><span>Word</span><span>Styles</span><span>Formatting</span></div>
+                <p class="pj-desc">Branded report templates for 6 business functions with automated styles, TOC generation, and formatting.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Inconsistent formatting across team reports was eroding credibility with senior stakeholders — branding mattered.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Unified template adopted team-wide; report formatting time reduced by 60% with automated style application.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🔐</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">DOC · 04</span><a href="LINK_WORD_04" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Data Governance Policy</h3>
+                <div class="pj-tags"><span>Word</span><span>Compliance</span></div>
+                <p class="pj-desc">Enterprise data governance framework covering data ownership, lineage, quality standards, and compliance.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Absence of data ownership meant critical datasets had no accountable custodian — a compliance exposure.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Framework passed external data audit with zero major findings; data steward programme launched company-wide.</p></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pj-card">
+              <div class="pj-cover"><span class="pj-cover-icon">🗂️</span></div>
+              <div class="pj-body">
+                <div class="pj-header"><span class="pj-n">DOC · 05</span><a href="LINK_WORD_05" target="_blank" class="pj-link">↗</a></div>
+                <h3 class="pj-title">Technical Specification Document</h3>
+                <div class="pj-tags"><span>Word</span><span>Architecture Diagrams</span></div>
+                <p class="pj-desc">Data architecture and pipeline specification with system diagrams, data flow maps, and integration details.</p>
+                <div class="pj-meta">
+                  <div class="pj-insight"><span class="pj-ml">💡 Business Insight</span><p>Engineering and data teams had divergent assumptions about pipeline behaviour — undocumented edge cases were the cause.</p></div>
+                  <div class="pj-impact"><span class="pj-ml">📈 Business Impact</span><p>Spec document resolved integration misalignment, cutting pipeline rebuild time from 6 weeks to 10 days.</p></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
@@ -1039,83 +2025,87 @@
 
       <div class="learn-stage">
 
+        <!-- ══ DATA SCIENCE & ML ══════════════════════════ -->
         <div class="learn-panel active" id="ltab-ds">
           <ul class="learn-list">
-            <li>Resource 1</li>
-            <li>Resource 2</li>
-            <li>Resource 3</li>
-            <li>Resource 4</li>
-            <li>Resource 5</li>
-            <li>Resource 6</li>
-            <li>Resource 7</li>
-            <li>Resource 8</li>
-            <li>Resource 9</li>
-            <li>Resource 10</li>
-            <li>Resource 11</li>
-            <li>Resource 12</li>
-            <li>Resource 13</li>
-            <li>Resource 14</li>
-            <li>Resource 15</li>
+            <li><a href="https://www.geeksforgeeks.org/machine-learning/machine-learning/" target="_blank" rel="noopener noreferrer">GeeksforGeeks — Machine Learning</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 2</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 3</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 4</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 5</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 6</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 7</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 8</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 9</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 10</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 11</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 12</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 13</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 14</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 15</a></li>
           </ul>
         </div>
 
+        <!-- ══ AI & EMERGING TECH ═════════════════════════ -->
         <div class="learn-panel" id="ltab-ai">
           <ul class="learn-list">
-            <li>Resource 1</li>
-            <li>Resource 2</li>
-            <li>Resource 3</li>
-            <li>Resource 4</li>
-            <li>Resource 5</li>
-            <li>Resource 6</li>
-            <li>Resource 7</li>
-            <li>Resource 8</li>
-            <li>Resource 9</li>
-            <li>Resource 10</li>
-            <li>Resource 11</li>
-            <li>Resource 12</li>
-            <li>Resource 13</li>
-            <li>Resource 14</li>
-            <li>Resource 15</li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 1</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 2</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 3</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 4</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 5</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 6</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 7</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 8</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 9</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 10</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 11</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 12</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 13</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 14</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 15</a></li>
           </ul>
         </div>
 
+        <!-- ══ BUSINESS & STRATEGY ════════════════════════ -->
         <div class="learn-panel" id="ltab-biz">
           <ul class="learn-list">
-            <li>Resource 1</li>
-            <li>Resource 2</li>
-            <li>Resource 3</li>
-            <li>Resource 4</li>
-            <li>Resource 5</li>
-            <li>Resource 6</li>
-            <li>Resource 7</li>
-            <li>Resource 8</li>
-            <li>Resource 9</li>
-            <li>Resource 10</li>
-            <li>Resource 11</li>
-            <li>Resource 12</li>
-            <li>Resource 13</li>
-            <li>Resource 14</li>
-            <li>Resource 15</li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 1</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 2</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 3</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 4</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 5</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 6</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 7</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 8</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 9</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 10</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 11</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 12</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 13</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 14</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 15</a></li>
           </ul>
         </div>
 
+        <!-- ══ PERSONAL EXPLORATION ═══════════════════════ -->
         <div class="learn-panel" id="ltab-explore">
           <ul class="learn-list">
-            <li>Resource 1</li>
-            <li>Resource 2</li>
-            <li>Resource 3</li>
-            <li>Resource 4</li>
-            <li>Resource 5</li>
-            <li>Resource 6</li>
-            <li>Resource 7</li>
-            <li>Resource 8</li>
-            <li>Resource 9</li>
-            <li>Resource 10</li>
-            <li>Resource 11</li>
-            <li>Resource 12</li>
-            <li>Resource 13</li>
-            <li>Resource 14</li>
-            <li>Resource 15</li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 1</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 2</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 3</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 4</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 5</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 6</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 7</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 8</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 9</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 10</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 11</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 12</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 13</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 14</a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Resource Name 15</a></li>
           </ul>
         </div>
 
@@ -1126,14 +2116,19 @@
   <!-- Watermark -->
   <p class="watermark">© 2026 Mahesh Mishra — Designed &amp; Built from scratch</p>
 
+  <!-- Page wipe overlay -->
+  <div id="page-wipe" aria-hidden="true"></div>
+
   <!-- Scripts -->
   <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="js/background.js"></script>
   <script src="js/domains.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/animations.js"></script>
 
   <!-- ═══ CORNER SCIENTIST ════════════════════════════ -->
   <div class="corner-scientist" aria-hidden="true" title="Always thinking...">
@@ -1219,8 +2214,5 @@
     <div class="cs-label">thinking...</div>
   </div>
 
-  <script src="js/background.js"></script>
-  <script src="js/domains.js"></script>
-  <script src="js/app.js"></script>
 </body>
 </html>
