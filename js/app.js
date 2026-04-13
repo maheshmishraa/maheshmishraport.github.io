@@ -729,43 +729,6 @@
     });
   })();
 
-  /* ══════════════════════════════════════════════
-     21. DIAGNOSTICS PRELOADER
-  ══════════════════════════════════════════════ */
-  (function() {
-    const preloader = document.getElementById('diagnostics-preloader');
-    if (!preloader) return;
-    return;
-
-    if (sessionStorage.getItem('preloader_shown')) {
-      preloader.style.display = 'none';
-      return;
-    }
-
-    // Sequence the terminal typing
-    const l1 = document.getElementById('loader-line-1');
-    const l2 = document.getElementById('loader-line-2');
-    const l3 = document.getElementById('loader-line-3');
-
-    setTimeout(() => {
-      if(l1) l1.querySelector('.cursor-blink').style.display = 'none';
-      if(l2) l2.style.display = 'block';
-    }, 600);
-
-    setTimeout(() => {
-      if(l2) l2.querySelector('.cursor-blink').style.display = 'none';
-      if(l3) l3.style.display = 'block';
-    }, 1400);
-
-    setTimeout(() => {
-      preloader.classList.add('slide-up');
-      sessionStorage.setItem('preloader_shown', 'true');
-    }, 2000);
-
-    setTimeout(() => {
-      preloader.style.display = 'none';
-    }, 2800);
-  })();
 
 })();
 

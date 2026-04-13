@@ -118,3 +118,67 @@ ul { list-style: none; }
 /* --- UTILITIES --- */
 .magnetic { will-change: transform; }
 #page-wipe { display: none; }
+
+/* --- DIAGNOSTICS PRELOADER --- */
+.diagnostics-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+.terminal-loader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--gold);
+  max-width: 600px;
+  padding: 2rem;
+  line-height: 1.8;
+}
+
+.loader-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.loader-line .prompt {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.loader-line .cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1em;
+  background: var(--gold);
+  animation: blink-cursor 1s step-end infinite;
+}
+
+.terminal-green { color: #10b981; }
+.terminal-gold { color: var(--gold); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes blink-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.diagnostics-preloader.slide-up {
+  animation: slideUpAndFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideUpAndFade {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-100%); }
+}
