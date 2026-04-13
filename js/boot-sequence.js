@@ -71,12 +71,14 @@
 
     // Reveal site
     preloader.classList.add('slide-up');
-    
+
     // Dispatch custom event for app.js to trigger intro animations
     window.dispatchEvent(new CustomEvent('bootComplete', { detail: { instant: false } }));
 
     setTimeout(() => {
       preloader.style.display = 'none';
+      preloader.style.visibility = 'hidden';
+      preloader.style.pointerEvents = 'none';
     }, 1000);
   }
 
