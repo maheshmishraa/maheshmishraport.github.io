@@ -14,6 +14,9 @@
 
   if (SHOULD_SKIP) {
     preloader.style.display = 'none';
+    preloader.style.visibility = 'hidden';
+    preloader.style.pointerEvents = 'none';
+    preloader.style.opacity = '0';
     window.dispatchEvent(new CustomEvent('bootComplete', { detail: { instant: true } }));
     return;
   }
