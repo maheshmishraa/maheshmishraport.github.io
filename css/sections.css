@@ -216,7 +216,7 @@
 }
 
 .proj-tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.ptab { display: flex; align-items: center; gap: .45rem; background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: .45rem 1rem; font-size: .78rem; font-weight: 500; color: var(--text2); cursor: none; transition: all .22s; }
+.ptab { display: flex; align-items: center; gap: .45rem; background: transparent; border: 1px solid var(--border); border-radius: 8px; padding: .45rem 1rem; font-size: .78rem; font-weight: 500; color: var(--text2); cursor: pointer; transition: all .22s; }
 .ptab-n { font-size: .64rem; font-weight: 700; background: rgba(99,102,241,0.08); border-radius: 4px; padding: .1rem .4rem; color: var(--text2); transition: all .22s; }
 .ptab:hover, .ptab.active { background: color-mix(in srgb, var(--cat, var(--gold)) 10%, transparent); border-color: var(--cat, var(--gold)); color: var(--cat, var(--gold)); }
 .ptab.active .ptab-n { background: color-mix(in srgb, var(--cat, var(--gold)) 18%, transparent); color: var(--cat, var(--gold)); }
@@ -262,7 +262,7 @@
 .blog-track { display: flex; gap: 1.4rem; transition: transform .45s cubic-bezier(0.4, 0, 0.2, 1); will-change: transform; }
 .blog-card { background: var(--card); border: 1px solid var(--card-b); border-radius: var(--r); padding: 1.6rem; display: flex; flex-direction: column; gap: .8rem; transition: transform .25s, border-color .25s; flex: 0 0 calc((100% - 2 * 1.4rem) / 3); min-width: 0; }
 .blog-card:hover { transform: translateY(-3px); border-color: rgba(99,102,241,0.25); }
-.blog-arrow { flex-shrink: 0; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--card); border: 1px solid var(--border); color: var(--text2); font-size: 1rem; line-height: 1; cursor: none; display: flex; align-items: center; justify-content: center; transition: background .22s, border-color .22s, color .22s, transform .22s; user-select: none; }
+.blog-arrow { flex-shrink: 0; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--card); border: 1px solid var(--border); color: var(--text2); font-size: 1rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background .22s, border-color .22s, color .22s, transform .22s; user-select: none; }
 .blog-arrow:hover { background: rgba(99,102,241,0.08); border-color: var(--gold); color: var(--gold); transform: scale(1.08); }
 .blog-arrow:disabled { opacity: 0.25; pointer-events: none; }
 .blog-featured { border-color: rgba(99,102,241,0.25); background: rgba(99,102,241,0.04); }
@@ -331,7 +331,7 @@
 /* --- 20. LEARNING --- */
 .section.learning { overflow-y: auto; }
 .learn-tabs { display: flex; gap: .4rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.ltab { display: flex; align-items: center; gap: .4rem; background: transparent; border: 1px solid var(--border); border-radius: var(--r-sm); padding: .45rem 1rem; font-size: .78rem; font-weight: 500; color: var(--text2); cursor: none; transition: all .22s; white-space: nowrap; }
+.ltab { display: flex; align-items: center; gap: .4rem; background: transparent; border: 1px solid var(--border); border-radius: var(--r-sm); padding: .45rem 1rem; font-size: .78rem; font-weight: 500; color: var(--text2); cursor: pointer; transition: all .22s; white-space: nowrap; }
 .ltab:hover { border-color: rgba(99,102,241,0.3); color: var(--text); background: rgba(99,102,241,0.06); }
 .ltab.active { background: rgba(99,102,241,0.10); border-color: var(--gold); color: var(--gold); box-shadow: var(--glow-gold); }
 .learn-stage { position: relative; }
