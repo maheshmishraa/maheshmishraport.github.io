@@ -6,12 +6,15 @@
 (function () {
   'use strict';
   if (typeof gsap === 'undefined') return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isCompactScreen = window.innerWidth < 900;
 
   /* ══════════════════════════════════════════════
      1. THREE.JS SCROLL SYNC
      Morphes the background based on page progress
   ══════════════════════════════════════════════ */
   function initThreeSync() {
+    if (prefersReducedMotion || isCompactScreen) return;
     const camera = window._bgCamera;
     const scene  = window._bgScene;
     if (!camera || !scene) {
@@ -51,6 +54,7 @@
      Dynamic SVG line connecting sections
   ══════════════════════════════════════════════ */
   function initGoldenThread() {
+    if (prefersReducedMotion || isCompactScreen) return;
     const threadPath = document.getElementById('golden-thread-path');
     const dataPacket = document.getElementById('data-packet');
     if (!threadPath) return;

@@ -9,6 +9,8 @@
 
   const canvas = document.getElementById('bg-canvas');
   if (!canvas || typeof THREE === 'undefined') return;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isCompactScreen = window.innerWidth < 900;
 
   /* ── Scene ───────────────────────────────────────────── */
   const scene  = new THREE.Scene();
@@ -18,15 +20,15 @@
   window._bgCamera = camera;
   camera.position.z = 580;
 
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isCompactScreen ? 1 : 1.5));
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   /* ── Config ──────────────────────────────────────────── */
-  const COUNT        = 70;
+  const COUNT        = prefersReducedMotion ? 18 : (isCompactScreen ? 28 : 42);
   const SPREAD       = { x: 900, y: 700, z: 400 };
-  const CONNECT_DIST = 170;
-  const MAX_PAIRS    = 600;
+  const CONNECT_DIST = prefersReducedMotion ? 130 : 160;
+  const MAX_PAIRS    = prefersReducedMotion ? 80 : (isCompactScreen ? 180 : 260);
 
   // Experimental palette: Executive Data — deep navy/indigo/gold-accent
   const COLORS = [0x4338CA, 0x6366F1, 0x4F46E5, 0x10B981];
@@ -76,7 +78,7 @@
   let scrollVelocity = 0;
   let lastScrollY = window.scrollY;
   
-  document.addEventListener('mousemove', e => {
+  if (!prefersReducedMotion) document.addEventListener('mousemove', e => {
     tx =  (e.clientX / window.innerWidth  - 0.5) * 60;
     ty = -(e.clientY / window.innerHeight - 0.5) * 45;
     
@@ -100,15 +102,20 @@
 
   window.addEventListener('scroll', () => {
     const cur = window.scrollY;
-    scrollVelocity = Math.abs(cur - lastScrollY) * 0.15;
+    scrollVelocity = Math.min(Math.abs(cur - lastScrollY) * 0.08, 8);
     lastScrollY = cur;
-  });
+  }, { passive: true });
 
   /* ── Animation ───────────────────────────────────────── */
   let frame = 0;
+  let isDocumentHidden = false;
+  document.addEventListener('visibilitychange', () => {
+    isDocumentHidden = document.hidden;
+  });
 
   (function animate() {
     requestAnimationFrame(animate);
+    if (isDocumentHidden) return;
     frame++;
 
     const sV = scrollVelocity;
@@ -131,13 +138,13 @@
       v.z += (targetZ - m.position.z) * springK;
       
       // Affect by scroll
-      if (sV > 0.1) {
-        v.y += (Math.random() - 0.5) * sV * 1.5;
-        v.z += (Math.random() - 0.5) * sV * 1.5;
+      if (!prefersReducedMotion && sV > 0.1) {
+        v.y += (Math.random() - 0.5) * sV;
+        v.z += (Math.random() - 0.5) * sV;
       }
       
       // 3. Swarm Physics - Repel from mouse violently
-      if (mouseWorld.active) {
+      if (!prefersReducedMotion && mouseWorld.active) {
         const dx = m.position.x - mouseWorld.x;
         const dy = m.position.y - mouseWorld.y;
         const distSq = dx*dx + dy*dy;
@@ -160,7 +167,7 @@
       m.position.z += v.z;
     }
 
-    if (frame % 2 === 0) {
+    if (frame % 3 === 0) {
       let idx = 0;
       outer: for (let i = 0; i < COUNT; i++) {
         const pi = meshes[i].position;
@@ -180,8 +187,8 @@
       posAttr.needsUpdate = true;
     }
 
-    camera.position.x += (tx - camera.position.x) * 0.025;
-    camera.position.y += (ty - camera.position.y) * 0.025;
+    camera.position.x += (tx - camera.position.x) * (prefersReducedMotion ? 0.012 : 0.02);
+    camera.position.y += (ty - camera.position.y) * (prefersReducedMotion ? 0.012 : 0.02);
     camera.lookAt(scene.position);
     renderer.render(scene, camera);
   })();

@@ -60,12 +60,10 @@
 
     <ul class="nav-links" id="nav-links-ul">
       <li><a href="#about" class="nav-item" data-page="about">About</a></li>
-      <li><a href="#skills" class="nav-item" data-page="skills">Skills</a></li>
-      <li><a href="#projects" class="nav-item" data-page="projects">Projects</a></li>
-      <li><a href="#blog" class="nav-item" data-page="blog">Blog</a></li>
+      <li><a href="#skills" class="nav-item" data-page="skills">Expertise</a></li>
+      <li><a href="#projects" class="nav-item" data-page="projects">Work</a></li>
+      <li><a href="#certificates" class="nav-item" data-page="certificates">Proof</a></li>
       <li><a href="#contact" class="nav-item" data-page="contact">Contact</a></li>
-      <li><a href="#certificates" class="nav-item" data-page="certificates">Certificates</a></li>
-      <li><a href="#learning" class="nav-item" data-page="learning">Learning</a></li>
       <div id="nav-pill" aria-hidden="true"></div>
     </ul>
 
@@ -86,12 +84,10 @@
   <!-- Mobile drawer -->
   <div class="mobile-drawer" id="mobile-drawer">
     <a href="#about" class="mob-link" data-page="about">About</a>
-    <a href="#skills" class="mob-link" data-page="skills">Skills</a>
-    <a href="#projects" class="mob-link" data-page="projects">Projects</a>
-    <a href="#blog" class="mob-link" data-page="blog">Blog</a>
+    <a href="#skills" class="mob-link" data-page="skills">Expertise</a>
+    <a href="#projects" class="mob-link" data-page="projects">Work</a>
+    <a href="#certificates" class="mob-link" data-page="certificates">Proof</a>
     <a href="#contact" class="mob-link" data-page="contact">Contact</a>
-    <a href="#certificates" class="mob-link" data-page="certificates">Certificates</a>
-    <a href="#learning" class="mob-link" data-page="learning">Learning</a>
     <a href="assets/resume.pdf" target="_blank" class="btn-gold">Download Resume ↓</a>
   </div>
 
@@ -117,13 +113,13 @@
       </div>
 
       <p class="hero-desc">
-        A 58-month trajectory from scientific rigor to global-scale analytics. Currently bridging the gap between raw
-        Big Data and executive leadership at GIM.
+        I build analytics systems, forecasting models, and executive-ready dashboards that turn complex data into
+        decisions teams can actually use.
       </p>
 
       <div class="hero-actions">
-        <a href="#projects" class="btn-gold magnetic" data-page="projects">Explore My Work</a>
-        <a href="#contact" class="btn-outline magnetic" data-page="contact">Get In Touch</a>
+        <a href="#projects" class="btn-gold magnetic" data-page="projects">View Case Studies</a>
+        <a href="#contact" class="btn-outline magnetic" data-page="contact">Let's Talk</a>
       </div>
 
       <div class="hero-stats" id="hero-stats-mount">
@@ -174,26 +170,17 @@
           </div>
         </div>
 
-        <!-- Card 2: Code Secret Sauce (SQL Terminal) -->
-        <div class="bento-card bento-terminal">
-          <div class="term-header">
-            <div class="term-dots"><span></span><span></span><span></span></div>
-            <div class="term-title">query_analysis.sql</div>
-          </div>
-          <div class="term-body" id="terminal-body">
-            <div id="term-history">
-              <pre id="code-secret-sauce" class="sql-code"></pre>
-            </div>
-            <div class="term-input-line" id="term-prompt-line">
-              <span class="term-prompt">mahesh@portfolio:~$</span>
-              <span id="term-current-input"></span>
-              <span class="term-cursor"></span>
-              <input type="text" id="term-hidden-input" autocomplete="off" spellcheck="false">
-            </div>
-          </div>
-          <div class="term-footer">
-            <span class="term-status">Query Success</span>
-            <span class="term-time">124ms</span>
+        <div class="bento-card bento-focus">
+          <p class="focus-kicker">Current focus</p>
+          <h3>Business-first data work for teams that need clarity fast.</h3>
+          <ul class="focus-list">
+            <li>Forecasting and KPI systems for executive decision-making</li>
+            <li>Automation that cuts repetitive reporting effort</li>
+            <li>Dashboards and analytics that connect technical depth to business outcomes</li>
+          </ul>
+          <div class="focus-links">
+            <a href="#projects">Explore work</a>
+            <a href="assets/resume.pdf" target="_blank" rel="noopener">Open resume</a>
           </div>
         </div>
 
@@ -208,8 +195,6 @@
 
       </div>
     </div>
-    </div>
-    </div>
   </section>
 
   <!-- ═══ ABOUT ═════════════════════════════════════ -->
@@ -218,12 +203,18 @@
       <div class="section-header">
         <span class="section-tag">// PROFILE</span>
         <h2>About <span class="text-gold">Me</span></h2>
+        <p class="section-desc">A quick read on how my background evolved from scientific rigor into analytics,
+          automation, and business-facing data strategy.</p>
       </div>
 
       <div class="about-box">
 
-        <!-- Left: Bio -->
         <div class="about-bio">
+          <p class="about-intro">
+            My path has been shaped by analytical discipline, operational execution, and strategic storytelling. That
+            combination lets me move comfortably between raw data work and leadership conversations.
+          </p>
+
           <div class="bio-chapters">
             <div class="bio-chapter">
               <div class="chapter-icon">🔬</div>
@@ -295,14 +286,16 @@
           </div>
         </div>
 
-        <!-- Right: Career Timeline -->
-        <div class="about-info">
-          <p class="tl-heading">Career Journey</p>
-          <div class="about-timeline" id="timeline-mount">
-            <!-- Injected by Data Engine -->
-          </div><!-- /.about-timeline -->
-        </div>
+      </div>
 
+      <div class="about-timeline-shell">
+        <div class="about-timeline-header">
+          <p class="tl-heading">Career Journey</p>
+          <p class="timeline-intro">A cleaner view of the milestones behind the portfolio.</p>
+        </div>
+        <div class="about-timeline" id="timeline-mount">
+          <!-- Injected by Data Engine -->
+        </div><!-- /.about-timeline -->
       </div>
     </div>
   </section>
@@ -328,10 +321,40 @@
       <div class="section-header">
         <span class="section-tag">// PROJECT PORTFOLIO</span>
         <h2>Featured <span class="text-gold">Projects</span></h2>
-        <p class="section-desc">65 projects across 7 tool categories. Select a tab to explore.</p>
+        <p class="section-desc">Start with the highest-signal work first, then browse the wider archive by tool and
+          delivery format.</p>
       </div>
 
-      <!-- Category Tabs -->
+      <div class="projects-overview">
+        <article class="projects-highlight">
+          <span class="projects-highlight-kicker">Case studies first</span>
+          <h3>Lead with business outcomes, not just tool lists.</h3>
+          <p>The archive still matters, but the section now opens with a clearer value story before the deeper browse
+            experience.</p>
+        </article>
+        <article class="projects-summary-card">
+          <span class="projects-summary-value">30+</span>
+          <span class="projects-summary-label">Portfolio projects</span>
+        </article>
+        <article class="projects-summary-card">
+          <span class="projects-summary-value">7</span>
+          <span class="projects-summary-label">Delivery categories</span>
+        </article>
+        <article class="projects-summary-card">
+          <span class="projects-summary-value">Top 3</span>
+          <span class="projects-summary-label">Cards carry the first impression</span>
+        </article>
+      </div>
+
+      <div class="projects-archive-header">
+        <div>
+          <span class="section-tag">Archive</span>
+          <h3 class="projects-archive-title">Browse the full project library</h3>
+        </div>
+        <p class="projects-archive-copy">Use the filters to jump into ML, BI, SQL, and communication work without
+          losing the overall narrative.</p>
+      </div>
+
       <div class="proj-tabs">
         <button class="ptab active" data-panel="pp-ml">
           <span>🤖</span><span>ML / AI</span><span class="ptab-n">10</span>
@@ -2228,76 +2251,35 @@
   <!-- Page wipe overlay -->
   <div id="page-wipe" aria-hidden="true"></div>
 
+
   <!-- Executive Insight HUD -->
-  <div id="insight-hud" class="hud-container">
-    <div class="hud-header">
-      <span class="hud-dot"></span>
-      <span class="hud-title">SYSTEM INSIGHT</span>
-    </div>
-    <div class="hud-body">
-      <div id="hud-content">Awaiting system interaction...</div>
-    </div>
-    <div class="hud-footer">
-      <span class="hud-status">AUTO_ANALYSIS: ON</span>
-    </div>
-  </div>
 
   <!-- Project Deep Dive Drawer -->
-  <div id="drawer-overlay" class="drawer-overlay"></div>
-  <div id="project-drawer" class="project-drawer">
+  <div id="legacy-drawer-overlay" class="drawer-overlay" hidden></div>
+  <div id="legacy-project-drawer" class="project-drawer" hidden>
     <div class="drawer-header">
-      <h2 id="drawer-title">Project Title</h2>
-      <button id="drawer-close" class="drawer-close">&times;</button>
+      <h2 id="legacy-drawer-title">Project Title</h2>
+      <button id="legacy-drawer-close" class="drawer-close">&times;</button>
     </div>
     <div class="drawer-content">
-      <img id="drawer-img" src="" alt="Project Image" class="drawer-img">
-      <div id="drawer-tags" class="drawer-tags"></div>
-      <p id="drawer-desc" class="drawer-desc"></p>
+      <img id="legacy-drawer-img" src="" alt="Project Image" class="drawer-img">
+      <div id="legacy-drawer-tags" class="drawer-tags"></div>
+      <p id="legacy-drawer-desc" class="drawer-desc"></p>
 
       <div class="drawer-section">
         <h3>💡 Business Insight</h3>
-        <p id="drawer-insight"></p>
+        <p id="legacy-drawer-insight"></p>
       </div>
 
       <div class="drawer-section">
         <h3>📈 Business Impact</h3>
-        <p id="drawer-impact"></p>
+        <p id="legacy-drawer-impact"></p>
       </div>
 
-      <a id="drawer-link" href="#" target="_blank" class="drawer-btn">View Source Code ↗</a>
+      <a id="legacy-drawer-link" href="#" target="_blank" class="drawer-btn">View Source Code ↗</a>
     </div>
   </div>
 
-  <!-- ═══ EXECUTIVE HUD V2 ══════════════════════ -->
-  <div class="exec-hud" id="exec-hud">
-    <div class="hud-bar">
-      <div class="hud-cell">
-        <span class="hud-status-dot" id="hud-status-dot"></span>
-        <span class="hud-label">SYS</span>
-        <span class="hud-value">ONLINE</span>
-      </div>
-      <div class="hud-divider"></div>
-      <div class="hud-cell">
-        <span class="hud-label">GOA_IST</span>
-        <span class="hud-value clock" id="hud-clock">--:--:--</span>
-      </div>
-      <div class="hud-divider"></div>
-      <div class="hud-cell">
-        <span class="hud-label">SECTION</span>
-        <span class="hud-value" id="hud-section">COMMAND_CENTER</span>
-      </div>
-      <div class="hud-divider"></div>
-      <div class="hud-cell hud-sync-wrap">
-        <span class="hud-label">SYNC</span>
-        <div class="hud-sync-track">
-          <div class="hud-sync-fill" id="hud-sync-bar"></div>
-        </div>
-        <span class="hud-value" id="hud-sync-pct">0%</span>
-      </div>
-      <div class="hud-divider"></div>
-      <button class="hud-toggle" id="hud-toggle" title="Toggle HUD">⌃</button>
-    </div>
-  </div>
 
   <!-- ═══ ELASTIC PROJECT DRAWER ═════════════════ -->
   <div class="drawer-overlay" id="drawer-overlay"></div>
@@ -2325,9 +2307,40 @@
     </div>
   </div>
 
+  <!-- â•â•â• EXECUTIVE HUD V2 â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <div class="exec-hud" id="exec-hud" hidden>
+    <div class="hud-bar">
+      <div class="hud-cell">
+        <span class="hud-status-dot" id="hud-status-dot"></span>
+        <span class="hud-label">SYS</span>
+        <span class="hud-value">ONLINE</span>
+      </div>
+      <div class="hud-divider"></div>
+      <div class="hud-cell">
+        <span class="hud-label">GOA_IST</span>
+        <span class="hud-value clock" id="hud-clock">--:--:--</span>
+      </div>
+      <div class="hud-divider"></div>
+      <div class="hud-cell">
+        <span class="hud-label">SECTION</span>
+        <span class="hud-value" id="hud-section">COMMAND_CENTER</span>
+      </div>
+      <div class="hud-divider"></div>
+      <div class="hud-cell hud-sync-wrap">
+        <span class="hud-label">SYNC</span>
+        <div class="hud-sync-track">
+          <div class="hud-sync-fill" id="hud-sync-bar"></div>
+        </div>
+        <span class="hud-value" id="hud-sync-pct">0%</span>
+      </div>
+      <div class="hud-divider"></div>
+      <button class="hud-toggle" id="hud-toggle" title="Toggle HUD">^</button>
+    </div>
+  </div>
+
   <!-- Main Footer Watermark -->
   <footer class="main-footer">
-    <p class="footer-copyright">© 2026 MAHESH MISHRA | PGDM - BIG DATA ANALYTICS @ GIM</p>
+    <p class="footer-copyright">&copy; 2026 MAHESH MISHRA | PGDM - BIG DATA ANALYTICS @ GIM</p>
   </footer>
 
   <!-- Scripts -->
@@ -2339,8 +2352,6 @@
   <script src="js/background.js"></script>
   <script src="js/app.js"></script>
   <script src="js/boot-sequence.js"></script>
-  <script src="js/intelligence-engine.js"></script>
-  <script src="js/drawer-engine.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/scroll-effects.js"></script>
   <script src="js/storyline.js"></script>

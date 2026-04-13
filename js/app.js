@@ -9,6 +9,8 @@
 
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
+  const canUseFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Initial states for Boot Sequence Reveal
   gsap.set(['.hero-badge', '.hero-name', '.hero-tagline', '.hero-desc', '.hero-actions', '.hero-stats', '.bento-card'], { opacity: 0, y: 36 });
@@ -111,7 +113,7 @@
   const dot  = document.getElementById('cursor-dot');
   const ring = document.getElementById('cursor-ring');
 
-  if (dot && ring) {
+  if (dot && ring && canUseFinePointer) {
     let mx = 0, my = 0, rx = 0, ry = 0;
 
     document.addEventListener('mousemove', e => {
@@ -130,6 +132,9 @@
       el.addEventListener('mouseenter', () => ring.classList.add('hovered'));
       el.addEventListener('mouseleave', () => ring.classList.remove('hovered'));
     });
+  } else {
+    if (dot) dot.style.display = 'none';
+    if (ring) ring.style.display = 'none';
   }
 
 
@@ -174,17 +179,6 @@
         .to('.hero-stats',   { opacity: 1, y: 0, duration: 0.65, ease: 'power3.out' }, 0.54)
         .to('.bento-card',   { opacity: 1, y: 0, duration: 0.8,  ease: 'power3.out', stagger: 0.1 }, 0.3);
     }
-  });
-
-  document.addEventListener('mousemove', e => {
-    const cards = document.querySelectorAll('.bento-card, .skill-card, .pj-card');
-    cards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-    });
   });
 
   /* ── DATA VISUALIZATION REVEALS ── */
@@ -256,17 +250,19 @@
   /* ══════════════════════════════════════════════
      10. MAGNETIC BUTTONS
   ══════════════════════════════════════════════ */
-  document.querySelectorAll('.magnetic').forEach(el => {
-    el.addEventListener('mousemove', e => {
-      const r  = el.getBoundingClientRect();
-      const dx = e.clientX - (r.left + r.width  / 2);
-      const dy = e.clientY - (r.top  + r.height / 2);
-      gsap.to(el, { x: dx * 0.25, y: dy * 0.25, duration: 0.3, ease: 'power2.out' });
+  if (canUseFinePointer && !prefersReducedMotion) {
+    document.querySelectorAll('.magnetic').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r  = el.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width  / 2);
+        const dy = e.clientY - (r.top  + r.height / 2);
+        gsap.to(el, { x: dx * 0.18, y: dy * 0.18, duration: 0.22, ease: 'power2.out' });
+      });
+      el.addEventListener('mouseleave', () => {
+        gsap.to(el, { x: 0, y: 0, duration: 0.35, ease: 'power2.out' });
+      });
     });
-    el.addEventListener('mouseleave', () => {
-      gsap.to(el, { x: 0, y: 0, duration: 0.55, ease: 'elastic.out(1, 0.4)' });
-    });
-  });
+  }
 
   /* ══════════════════════════════════════════════
      11. SCROLL-BASED NAVIGATION
@@ -598,6 +594,7 @@
      16b. PHOTO MAGNIFY TOOLTIP
   ══════════════════════════════════════════════ */
   (function () {
+    if (!canUseFinePointer || prefersReducedMotion) return;
     const photo = document.querySelector('.id-photo');
     if (!photo) return;
 
@@ -622,75 +619,19 @@
     });
   })();
 
-  /* ══════════════════════════════════════════════
-     17. EXECUTIVE INSIGHT HUD ENGINE
-  ══════════════════════════════════════════════ */
-  (function () {
-    const hud        = document.getElementById('insight-hud');
-    const hudContent = document.getElementById('hud-content');
-    if (!hud || !hudContent) return;
-
-    const defaultText = "Awaiting system interaction...";
-
-    function typeHUD(text) {
-      hudContent.style.opacity = 0;
-      setTimeout(() => {
-        hudContent.textContent = text;
-        hudContent.style.opacity = 1;
-      }, 200);
-    }
-
-    // Match rules: [CSS selector] -> message
-    const rules = [
-      ['#bento-id-card',    'IDENTITY VERIFIED: Mahesh Mishra. Clearance: Lead Data Professional.'],
-      ['#bento-stat-impact','DATA INSIGHT: Analytics model delivered 15.4% efficiency lift.'],
-      ['#bento-stat-data',  'SYSTEM LOAD: 1.2TB+ processed monthly via optimized ETL pipelines.'],
-      ['#terminal-body',    'INTERFACE: Terminal REPL active. Type "help" for commands.'],
-      ['.bento-terminal',   'INTERFACE: Interactive SQL terminal. Click to enter commands.'],
-      ['#sk-ds-ml',         'SKILL PROFILE: Data Science & ML — predictive modeling specialist.'],
-      ['#sk-de-etl',        'SKILL PROFILE: Data Engineering — architecting scalable data flows.'],
-      ['#sk-viz',           'SKILL PROFILE: Analytics & BI — turning data into executive gold.'],
-      ['.tl-item',          'CAREER LOG: Professional milestone with measurable ROI.'],
-      ['.pj-card',          'PROJECT FILE: Business-impact case study. Click ↗ to view.'],
-      ['.cert-card',        'CERTIFICATION: Verified professional credential.'],
-      ['.skill-card',       'COMPETENCY MODULE: Core technical proficiency area.'],
-    ];
-
-    document.addEventListener('mouseover', (e) => {
-      for (const [selector, message] of rules) {
-        if (e.target.closest(selector)) {
-          hud.classList.add('active');
-          if (hudContent.textContent !== message) {
-            typeHUD(message);
-          }
-          return;
-        }
-      }
-    });
-
-    document.addEventListener('mouseout', (e) => {
-      // Only reset if leaving an interactive element entirely
-      const still = e.relatedTarget;
-      for (const [selector] of rules) {
-        if (still && still.closest && still.closest(selector)) return;
-      }
-      hud.classList.remove('active');
-    });
-  })();
 
   /* ══════════════════════════════════════════════
      18. SPOTLIGHT HOVER EFFECT
   ══════════════════════════════════════════════ */
   (function () {
+    if (!canUseFinePointer || prefersReducedMotion) return;
     const cards = document.querySelectorAll('.bento-card, .skill-card');
-    document.addEventListener('mousemove', (e) => {
-      for (const card of cards) {
+    cards.forEach(card => {
+      card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        card.style.setProperty('--mouse-x', `${x}px`);
-        card.style.setProperty('--mouse-y', `${y}px`);
-      }
+        card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
+        card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
+      });
     });
   })();
 
@@ -794,6 +735,7 @@
   (function() {
     const preloader = document.getElementById('diagnostics-preloader');
     if (!preloader) return;
+    return;
 
     if (sessionStorage.getItem('preloader_shown')) {
       preloader.style.display = 'none';

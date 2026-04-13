@@ -18,6 +18,7 @@
   'use strict';
   if (typeof gsap === 'undefined') return;
   gsap.registerPlugin(ScrollTrigger);
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ══════════════════════════════════════════════
      1. SCROLL PROGRESS BAR
@@ -37,31 +38,31 @@
      hero-right drifts slower → depth illusion
   ══════════════════════════════════════════════ */
   const heroEl = document.getElementById('hero');
-  if (heroEl) {
+  if (heroEl && !prefersReducedMotion) {
     // Left column — fast upward drift + fade
     gsap.to('.hero-left', {
-      y: -180,
-      opacity: 0,
+      y: -90,
+      opacity: 0.25,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.6,
+      },
+    });
+
+    // Right column — slower, slight scale shrink
+    gsap.to('.hero-right', {
+      y: -36,
+      opacity: 0.45,
+      scale: 0.96,
       ease: 'none',
       scrollTrigger: {
         trigger: '#hero',
         start: 'top top',
         end: 'bottom top',
         scrub: 0.8,
-      },
-    });
-
-    // Right column — slower, slight scale shrink
-    gsap.to('.hero-right', {
-      y: -80,
-      opacity: 0,
-      scale: 0.90,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1.6,
       },
     });
 
@@ -76,16 +77,16 @@
   document.querySelectorAll('section[id]:not(#hero)').forEach(section => {
     const inner = section.querySelector('.container') || section;
     gsap.fromTo(inner,
-      { y: 50, opacity: 0 },
+      { y: prefersReducedMotion ? 0 : 30, opacity: prefersReducedMotion ? 1 : 0 },
       {
         y: 0,
         opacity: 1,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: section,
-          start: 'top 95%',
-          end: 'top 20%',
-          scrub: 1.2,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+          once: true,
         },
       }
     );
