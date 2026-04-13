@@ -176,9 +176,10 @@ ul { list-style: none; }
 
 .diagnostics-preloader.slide-up {
   animation: slideUpAndFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  pointer-events: none;
 }
 
 @keyframes slideUpAndFade {
-  0% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-100%); }
+  0% { opacity: 1; transform: translateY(0); pointer-events: auto; }
+  100% { opacity: 0; transform: translateY(-100%); pointer-events: none; }
 }
