@@ -60,7 +60,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   line-height: 1.75;
-  padding-top: calc(var(--nav-h) + var(--ticker-h));
+  padding-top: var(--nav-h);
   position: relative;
   z-index: 0;
 }
@@ -68,7 +68,7 @@ body {
 .page {
   position: relative;
   overflow-x: hidden;
-  scroll-margin-top: calc(var(--nav-h) + var(--ticker-h));
+  scroll-margin-top: calc(var(--nav-h) + 0.75rem);
 }
 
 a { color: inherit; text-decoration: none; }
@@ -104,18 +104,18 @@ ul { list-style: none; }
 }
 
 .text-gold { color: var(--gold); }
-.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(2rem, 6vw, 4rem); }
-.section { padding: var(--section-pad) 0; border-top: 1px solid var(--border); }
-.section-header { margin-bottom: 4rem; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2rem); }
+.section { padding: clamp(4rem, 7.5vh, 6.25rem) 0; border-top: 1px solid var(--border); }
+.section-header { margin-bottom: 2.2rem; }
 .section-tag {
-  display: block; margin-bottom: .6rem;
+  display: block; margin-bottom: .5rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: .72rem; font-weight: 500;
   color: var(--gold); letter-spacing: .14em;
   text-transform: uppercase; opacity: .85;
 }
-.section-header h2 { font-size: clamp(1.8rem, 4.5vw, 2.75rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.18; }
-.section-desc { margin-top: .85rem; font-size: .95rem; color: var(--text2); max-width: 620px; line-height: 1.7; }
+.section-header h2 { font-size: clamp(1.7rem, 4vw, 2.35rem); font-weight: 700; letter-spacing: -.025em; line-height: 1.15; }
+.section-desc { margin-top: .75rem; font-size: .95rem; color: var(--text2); max-width: 620px; line-height: 1.7; }
 
 /* --- UTILITIES --- */
 .magnetic { will-change: transform; }
